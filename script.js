@@ -1,7 +1,7 @@
 //Navigation Toggle Menu
 let menuOpen = document.querySelector('.navigation__wrapper');
 let navigation__toggle = document.querySelector('.navigation__toggle');
-let navigationBar = document.querySelector('.Navigation-bar');
+let navigationBar = document.getElementById('navigation-bar');
 let menuToggle = document.getElementById('menuToggle');
 //Navigation menu Open
 menuToggle.addEventListener('click', function(){
