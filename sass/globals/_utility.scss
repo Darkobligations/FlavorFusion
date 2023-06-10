@@ -10,18 +10,19 @@
     //font size
     --header-size:clamp(2.8125rem, 7vw, 3.9rem);
     --headerTwo-size:clamp(2.3rem, 5vw, 2.6rem);
-    --sub-head:clamp(1.5rem, 2vw, 1.7rem);
+    --sub-head:clamp(1.1rem, 2vw, 1.7rem);
     --body-size:1rem;
     --footer-size:clamp(0.875rem, 1.5vw, 0.938rem);
 
     //font weight
-    --font-weight:300;
     --font-weight:400;
     --font-weight:700;
 
     //navbar height
     --navbar-height:132px;
 
+    //padding
+    --section-padding:clamp(3.75em, 7.82vw, 6.25em) 1rem;
 }
 
 @font-face {

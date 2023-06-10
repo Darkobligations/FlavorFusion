@@ -72,6 +72,105 @@
         }
     }
 
+    &__order{
+        height:100vh;
+        position: absolute;
+        background-color: white;
+        z-index: 2;
+        width:100%;
+        left:0;
+        top:0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transform: scaleX(0);
+    }
+    
+    &__order-flexRow{
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+        padding:1.5em;
+        border-bottom:1px rgba(0, 0, 0, 0.158) solid;
+        align-items: center;
+        .order-heading{
+            font-size:var( --sub-head);
+            font-weight: 700;
+        }
+
+        button{
+            border:0;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            width:2.5em;
+            height:2.5em;
+            justify-content: center;
+        }
+
+        .close-span{
+            background-color: black;
+            width:23px;
+            height:2px;
+            display: block;
+            position: absolute;
+            transform: rotate(-45deg);
+        }
+
+        .close-span::after{
+            content:'';
+            width:23px;
+            height:2px;
+            display: block;
+            position: absolute;
+            background-color: black;
+            transform: rotate(90deg);
+        }
+    }
+
+    .orders{
+        display: flex;
+        flex-grow: 1;
+        width:100%;
+    }
+
+    .checkout{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        padding:1.5em;
+        width:100%;
+        border-top:1px rgba(0, 0, 0, 0.301) solid;
+        gap:1.5em;
+        .subtotal{
+            display: flex;
+            align-items: center;
+            width:100%;
+            justify-content: space-between;
+            
+            span{
+                font-size: clamp(1.3rem, 1.5vw, 1.4rem);
+            }
+
+            span:nth-child(1){
+                opacity: .95;
+            }
+        }
+
+        button{
+            border:none;
+            border-radius: 5px;
+            padding:1.5em 0;
+            background-color: var(--util-color);
+            cursor: pointer;
+            font-size:var( --body-size)
+        }
+    }
+
+    .navigation__order.open{
+        transform: scale(1);
+    }
+
     &__order-toggle{
         height:4em;
         width:4em;

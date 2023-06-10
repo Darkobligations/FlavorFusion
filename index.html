@@ -41,12 +41,14 @@
 </head>
 <body>
     
-    <!--Top Banner-->
+    <!------------------------------------------------>
+    <!----                 TOPPER                 ---->
+    <!------------------------------------------------>
     <div class = "banner">
         <picture class = "banner__image-wrapper" aria-hidden = "true">
-            <img class = "banner__image" width = "150" height = "200" decoding="async" src = "image/Utility/buttonBackground.svg">
+            <img class = "banner__image" width = "150" height = "200" decoding="async" src = "image/Utility/bannerBackground.svg">
         </picture>
-        <span class = "banner__text">We offer takeaway and delivery services for your convenience.<a class = "banner__order" href = "menu" aria-label = "Click here to order now."> Order Now!</a></span>
+        <span class = "banner__text">We offer takeaway and delivery services for your convenience.<a class = "banner__order" href = "" aria-label = "Click here to order now."> Order Now!</a></span>
     </div>
 
     <!------------------------------------------------>
@@ -66,18 +68,19 @@
                     <li><a class = "navigation__links" aria-label = "Go to contact section" href = "#form">Contact</a></li>
                 </ul>
             </nav>
+                <!--ORDER MENU-->
             <div class = "navigation__order">
                 <div class = "navigation__order-flexRow">
-                    <span>Your Order</span>
-                    <button aria-label = "close the order menu" class = "closeToggle"><span aria-hidden = "true"></span></button>
+                    <span class = "order-heading">Your Order</span>
+                    <button aria-label = "close the order menu" id = "closeToggle" class = "closeToggle"><span class = "close-span" aria-hidden = "true"></span></button>
                 </div>
                 <div class = "orders">
-
+                    
                 </div>
                 <div class = "checkout">
                     <div class = "subtotal">
-                        <span>Subtotal</span>
-                        <span>$4.00</span>
+                        <span> Subtotal</span>
+                        <span class = "price">$4.00</span>
                     </div>
                     <button>Continue to Checkout</button>
                 </div>
@@ -97,8 +100,20 @@
      <!---               LANDING PAGE               --->
      <!------------------------------------------------>
 
-    <section id = ""> 
-             
+    <section id = "landing-section"> 
+        <div class = "landing">
+            <div class = "landing__textContainer">
+                <h1 class = "landing__heading">Flavor Fusion: Delightful Delivery</h1>
+                <p class = "landing__paragraph">Welcome to Flavor Fusion, your go-to destination for exquisite culinary experiences delivered straight to your doorstep.</p>
+            </div>
+            <div class = "landing__image">
+                <img>
+            </div>
+            <a class = "landing__button href-button" aria-label = "Go to order" href = "">
+                <span>Place an Order</span>
+                <img src = "/image/Utility/buttonBackground.webp" aria-hidden = "true" >
+            </a>
+        </div>
     </section>
      
      <!------------------------------------------------>

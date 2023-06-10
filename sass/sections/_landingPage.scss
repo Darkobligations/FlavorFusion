@@ -1,0 +1,36 @@
+#landing-section{
+    padding:var(--section-padding);
+    letter-spacing: 1px;
+}
+
+.landing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__textContainer{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        justify-content: center;
+    }
+    
+    &__heading{
+        font-size:var( --header-size);
+        text-align: center;
+    }
+
+    &__paragraph{
+        font-size:var( --sub-head);
+        text-align: center;
+        line-height: 25px;
+    }
+
+    .landing__button.href-button{
+        padding:1.3em 1em;
+        background-color: var(--util-color);
+        border-radius: 5px;
+        color:var(--body-color);
+        
+    }
+}
