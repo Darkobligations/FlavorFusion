@@ -1,11 +1,12 @@
 
 :root{
     //color scheme
-    --background-color:#f4f4f4;
+    --background-color:#ffffff;
+    --secondaryBG-color:#f8f7ff;
     --body-color:#333333;
     --heading-color:#000000;
-    --util-color:#FFE082;
-    --secondaryUtil-color:#707070;
+    --util-color:#b8b8ff;
+    --secondaryUtil-color:#6153B0;
 
     //font size
     --header-size:clamp(2.6rem, 7vw, 3.9rem);
@@ -19,7 +20,7 @@
     --font-weight:700;
 
     //navbar height
-    --navbar-height:132px;
+    --navbar-height:94.93px;
 
     //padding
     --section-padding:clamp(3.75em, 7.82vw, 6.25em) 1rem;

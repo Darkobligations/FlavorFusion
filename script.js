@@ -1,11 +1,17 @@
 //Navigation Toggle Menu
 let menuOpen = document.querySelector('.navigation__wrapper');
 let navigation__toggle = document.querySelector('.navigation__toggle');
-
+let navigationBar = document.querySelector('.Navigation-bar');
+let menuToggle = document.getElementById('menuToggle');
 //Navigation menu Open
-document.getElementById('menuToggle').addEventListener('click', function(){
+menuToggle.addEventListener('click', function(){
     navigation__toggle.classList.toggle('active');
     menuOpen.classList.toggle('open');
+    if(menuToggle.click){
+        navigationBar.classList.toggle('active');
+    }
+    
+    
 })
 
 

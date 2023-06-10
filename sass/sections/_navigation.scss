@@ -1,11 +1,10 @@
 .banner{
-    display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
-    position: relative;
     width:100%;
     background-color: var(--util-color);
-    height:100%;
+    transform: scale(0);
     padding:.50em;
     &__image-wraper{
         width: 100%;
@@ -45,12 +44,15 @@
 }      
 
 #navigation-bar{
-    background-color: white;
     width:100%;
     display:flex;
-    padding:.50em;
+    padding:1.3em;
     align-items: center;
-    
+}
+
+.Navigation-bar.active{
+    background-color: white;
+    transition: .4s all ease-out;
 }
 
 .navigation {
@@ -169,6 +171,7 @@
 
     .navigation__order.open{
         transform: scale(1);
+        
     }
 
     &__order-toggle{
@@ -202,8 +205,9 @@
             left:0;
             padding:2em;
             transform: scaleY(0);
+            transform-origin: top;
             border-top:1px rgba(0, 0, 0, 0.048) solid;
-        
+            transition: .2s ease-in-out;
         }
 
         &__ul{
