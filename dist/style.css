@@ -228,7 +228,7 @@ body {
   object-fit: contain;
 }
 .navigation__order {
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
   background-color: white;
   z-index: 2;
