@@ -228,20 +228,19 @@ body {
   object-fit: contain;
 }
 .navigation__order {
-  min-height: 100vh;
   position: fixed;
   background-color: white;
   z-index: 2;
   width: 100%;
   left: 0;
+  right: 0;
+  bottom: 0;
   top: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   transform: scaleX(0);
-  transform-origin: bottom right;
-  right: 0;
-  bottom: 0;
+  transform-origin: right;
   transition: 0.25s;
 }
 .navigation__order-flexRow {
