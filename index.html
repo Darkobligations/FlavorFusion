@@ -102,25 +102,29 @@
      <!------------------------------------------------>
 
     <section id = "landing-section"> 
-        <div class = "landing">
-            <div class = "landing__textContainer">
-                <h1 class = "landing__heading">Flavor Fusion: Delightful <span>Delivery</span></h1>
-                <p class = "landing__paragraph">Welcome to Flavor Fusion, your go-to destination for exquisite culinary experiences delivered straight to your doorstep.</p>
+        <div class = "landing-container">
+            <div class = "landing">
+                <div class = "landing__textContainer">
+                    <h1 class = "landing__heading">Flavor Fusion: Delightful <span>Delivery</span></h1>
+                    <p class = "landing__paragraph">Welcome to Flavor Fusion, your go-to destination for exquisite culinary experiences delivered straight to your doorstep.</p>
+                </div>
+                <a class = "landing__button href-button" aria-label = "Go to order" href = "">
+                    Place an Order
+                </a>
+                <div class = "landing__review">
+                    <img src = "/image/icons/review.png" width = "60" height = "40" decoding = "async">
+                    <span class = "review-span"><span>4.9 out of 5 stars</span> based on 4000+ reviews</span>
+                </div>
             </div>
-            <a class = "landing__button href-button" aria-label = "Go to order" href = "">
-                Place an Order
-            </a>
-            <div class = "landing__review">
-                <img src = "/image/icons/review.png" width = "60" height = "40" decoding = "async">
-                <span class = "review-span"><span>4.9 out of 5 stars</span> based on 4000+ reviews</span>
+            <div class = "image-container">
+                <img class = "utility-img" src = "image/Utility/phone.webp" aria-hidden="true" width = "50" height = "50">
+                <picture class = "landing__img" aria-hidden = "true">
+                    <source media ="(max-width: 600px)" srcset = "/image/sectionImages/landing-mobileImg.webp">
+                    <source media ="(min-width: 601px)" srcset = "/image/sectionImages/landing-desktopImg.webp">
+                    <img src = "/image/sectionImages/landing-desktopImg.webp" width = "300" height = "350" decoding="async">
+                </picture>
             </div>
         </div>
-
-        <picture class = "landing__img" aria-hidden = "true">
-            <source media ="(max-width: 600px)" srcset = "/image/sectionImages/landing-mobileImg.webp">
-            <source media ="(min-width: 601px)" srcset = "/image/sectionImages/landing-desktopImg.webp">
-            <img src = "/image/sectionImages/landing-desktopImg.webp" width = "300" height = "350" decoding="async">
-        </picture>
     </section>
      
      <!------------------------------------------------>
