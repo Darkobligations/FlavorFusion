@@ -64,9 +64,9 @@
                 <!--NAVIGATION LIST-->
                 <ul class = "navigation__ul">
                     <li><a class = "navigation__links" aria-label = "Go to home page" href = "/">Home</a></li>
-                    <li><a class = "navigation__links" aria-label = "Go to about section" href = "#about-me">Order</a></li>
-                    <li><a class = "navigation__links" aria-label = "Go to projects section" href = "#projects">About</a></li>
-                    <li><a class = "navigation__links" aria-label = "Go to contact section" href = "#form">Contact</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to about section" href = "">Order</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to projects section" href = "">About</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to contact section" href = "">Contact</a></li>
                 </ul>
             </nav>
                 <!--ORDER MENU-->
@@ -108,7 +108,7 @@
                     <h1 class = "landing__heading">Flavor Fusion: Delightful <span>Delivery</span></h1>
                     <p class = "landing__paragraph">Welcome to Flavor Fusion, your go-to destination for exquisite culinary experiences delivered straight to your doorstep.</p>
                 </div>
-                <a class = "landing__button href-button" aria-label = "Go to order" href = "">
+                <a class = "landing__button" aria-label = "Go to order" href = "">
                     Place an Order
                 </a>
                 <div class = "landing__review">
@@ -131,8 +131,21 @@
      <!---              ABOUT SECTION               --->
      <!------------------------------------------------>
 
-    <section id = "">
- 
+    <section id = "about-section">
+        <div class = "about">
+            <div class = "about__info">
+                <h2 class = "about__heading">Discover Flavor Fusion: Elevating Culinary Delivery</h2>
+                <p class = "about__paragraph">
+                    Flavor Fusion is your gateway to an exceptional culinary journey, offering a wide range of delectable dishes delivered right to your doorstep. With a dedication to quality and flavor, we carefully craft each meal to deliver an unforgettable dining experience.
+                </p>
+                <a class = "about__button" aria-label = "Go to learn more about us" href = "">Learn about us</a>
+            </div>
+            <picture class = "about__img" aria-hidden = "true">
+                <source media ="(max-width: 600px)" srcset = "image/sectionImages/about-mobileImg.jpg">
+                <source media ="(min-width: 601px)" srcset = "image/sectionImages/about-desktopImg.jpg">
+                <img src = "image/sectionImages/about-desktopImg.jpg" width = "300" height = "500" decoding="async">
+            </picture>
+        </div>
     </section>
 
      
