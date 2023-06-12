@@ -117,11 +117,11 @@
                 </div>
             </div>
             <div class = "image-container">
-                <img class = "utility-img" src = "image/Utility/phone.webp" aria-hidden="true" width = "50" height = "50">
+                <img class = "utility-img" src = "image/Utility/phone.webp" aria-hidden="true" alt = "" width = "50" height = "50">
                 <picture class = "landing__img" aria-hidden = "true">
-                    <source media ="(max-width: 600px)" srcset = "/image/sectionImages/landing-mobileImg.webp">
+                    <source media ="(max-width: 600px)" srcset = "/image/sectionImages/landing-mobileImg.jpg">
                     <source media ="(min-width: 601px)" srcset = "/image/sectionImages/landing-desktopImg.webp">
-                    <img src = "/image/sectionImages/landing-desktopImg.webp" width = "300" height = "350" decoding="async">
+                    <img src = "/image/sectionImages/landing-desktopImg.webp" alt = "" width = "300" height = "350" decoding="async">
                 </picture>
             </div>
         </div>
@@ -143,18 +143,42 @@
             <picture class = "about__img" aria-hidden = "true">
                 <source media ="(max-width: 600px)" srcset = "image/sectionImages/about-mobileImg.jpg">
                 <source media ="(min-width: 601px)" srcset = "image/sectionImages/about-desktopImg.jpg">
-                <img src = "image/sectionImages/about-desktopImg.jpg" width = "300" height = "500" decoding="async">
+                <img src = "image/sectionImages/about-desktopImg.jpg" alt = "" width = "300" height = "500" decoding="async">
             </picture>
         </div>
     </section>
 
      
      <!------------------------------------------------>
-     <!---              PROJECTS SECTION            --->
+     <!---              Menu Section                --->
      <!------------------------------------------------>
 
-    <section id = "">
-        
+    <section id = "menu-section">
+        <div class = "menu">
+            <div class = "menu__info">
+                <h2 class = "menu__heading">
+                    Flavorful Menu Options
+                </h2>
+                <p class = "menu__paragraph">You can either conveniently place an order online using our menu or give our store a <span>call</span> to arrange a pickup order for fast and delicious food.</p>
+            </div>
+            <div class = "menu__buttons-wrapper">
+                <button class = "menu__button" data-id = "burgers">Burgers</button>
+                <button class = "menu__button" data-id = "sides">Sides</button>
+                <button class = "menu__button" data-id = "drinks">Drinks</button>
+            </div>
+            <div class = "menu__food-wrapper">
+                <img class = "menu__food-img">
+                <h3>Blaze Burger</h3>
+                <span>$7.20 USD</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!</p>
+                <div class = "menu__add-to-cart">
+                    <form>
+                        <input type = "number" pattern="^[0-9] + $" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
+                        <button type = "submit" class = "add-to-cart" for = "submit">
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
      
