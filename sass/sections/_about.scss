@@ -10,7 +10,9 @@
     align-items: center;
     justify-content: center;
     gap:2em;
-    padding:var( --section-padding) 0em;
+    padding:var(--section-padding);
+    padding-left:0;
+    padding-right:0;
     position: relative;
     &__info{
         display: flex;

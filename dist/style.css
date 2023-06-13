@@ -446,7 +446,9 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2em;
-  padding: var(--section-padding) 0em;
+  padding: var(--section-padding);
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
 }
 .about__info {
@@ -500,4 +502,101 @@ body {
   object-fit: contain;
   z-index: 1;
   display: block;
+}
+
+#menu-section {
+  padding: var(--section-padding);
+  letter-spacing: 1px;
+}
+
+.menu {
+  padding: var(--section-padding);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5em;
+  padding-right: 0;
+  padding-left: 0;
+  align-items: center;
+}
+.menu__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+.menu__heading {
+  font-size: var(--headerTwo-size);
+  line-height: 45px;
+}
+.menu__paragraph {
+  line-height: 25px;
+}
+.menu__paragraph span {
+  color: var(--secondaryUtil-color);
+  border-bottom: 1px solid var(--secondaryUtil-color);
+}
+.menu__buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 2em;
+  width: 100%;
+}
+.menu__button {
+  width: 90%;
+  padding: 1.2em;
+  border-radius: 5px;
+  border: transparent;
+  background-color: var(--util-color);
+  font-size: var(--body-size);
+  cursor: pointer;
+}
+.menu__food-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  align-items: start;
+  margin-top: 2em;
+}
+.menu__food-img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 5px;
+}
+.menu__food-name {
+  font-size: var(--headerThree-size);
+  letter-spacing: 0.5px;
+  margin-top: 0.5em;
+}
+.menu__food-price {
+  color: var(--secondaryUtil-color);
+}
+.menu__add-to-cart {
+  display: flex;
+  gap: 0.4em;
+  width: 100%;
+}
+.menu__capacity {
+  border-radius: 5px;
+  outline: none;
+  border: 1px rgba(128, 128, 128, 0.644) solid;
+  font-size: var(--body-size);
+  padding: 0.8em 0 0.8em 1em;
+}
+.menu__cart-button {
+  background-color: var(--util-color);
+  border: none;
+  border-radius: 5px;
+  width: 40%;
+  font-size: var(--body-size);
 }/*# sourceMappingURL=style.css.map */
