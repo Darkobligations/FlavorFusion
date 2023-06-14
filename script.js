@@ -131,7 +131,7 @@ const allfoodItems = [
     },
 ]
 
-const burgers = [
+const initialDisplay = [
     {
         id:1,
         image:"/image/menuImages/Rocket Burger.jpg",
@@ -173,23 +173,24 @@ const filterButtons = document.querySelectorAll('.menu__button');
 //initially load items
 
 window.addEventListener('DOMContentLoaded', function(){
-    displayMenuItems(burgers)
+    displayMenuItems(initialDisplay)
 })
 
 //buttons filter
 
 filterButtons.forEach(function(filterButton){
     filterButton.addEventListener('click', function (e){
+        //Current Target = menu__button-active
         document.querySelector('.menu__button-active')?.classList.remove('menu__button-active');
-        filterButton.classList.add('filterButton')
-        
+        filterButton.classList.add('menu__button-active')
+        //Current Target = data-id
         const category = e.currentTarget.dataset.id;
         const menuButton = allfoodItems.filter(function(food_item){
             if(food_item.category === category)
             return food_item;
         })
         if(category === 'burgers'){
-            displayMenuItems(burgers)
+            displayMenuItems(initialDisplay)
             
         }else{
             displayMenuItems(menuButton)
