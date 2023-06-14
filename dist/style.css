@@ -551,9 +551,16 @@ body {
   padding: 1.2em;
   border-radius: 5px;
   border: transparent;
-  background-color: var(--util-color);
+  background-color: transparent;
   font-size: var(--body-size);
   cursor: pointer;
+  border: 1px rgba(0, 0, 0, 0.103) solid;
+}
+.menu__button:hover {
+  background-color: var(--util-color);
+}
+.menu__button-active {
+  background-color: var(--util-color);
 }
 .menu__food-wrapper {
   display: flex;
@@ -569,7 +576,7 @@ body {
 }
 .menu__food-img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
   border-radius: 5px;
 }
@@ -591,7 +598,7 @@ body {
   outline: none;
   border: 1px rgba(128, 128, 128, 0.644) solid;
   font-size: var(--body-size);
-  padding: 0.8em 0 0.8em 1em;
+  padding: 0.8em 0 0.8em 0.7em;
 }
 .menu__cart-button {
   background-color: var(--util-color);
@@ -599,4 +606,12 @@ body {
   border-radius: 5px;
   width: 40%;
   font-size: var(--body-size);
+}
+.menu__button-end {
+  padding: 1.3em 4em;
+  background-color: var(--util-color);
+  border-radius: 5px;
+  color: var(--body-color);
+  margin-top: 2em;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
