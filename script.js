@@ -166,7 +166,7 @@ const initialDisplay = [
     }
 ]
 
-let parentMenu = document.querySelector('.container-parent');
+let parentMenu = document.querySelector('.menu__food-wrapper');
 const filterButtons = document.querySelectorAll('.menu__button');
 
 
@@ -200,16 +200,21 @@ filterButtons.forEach(function(filterButton){
 
 function displayMenuItems(menuitems){
     let displayMenu = menuitems.map(function(item){
-        return ` <div class = "menu__food-wrapper">
-        <img src = "${item.image}" class = "menu__food-img" width = "150" height = "250" decoding = "async" loading = "lazy">
-        <h3 class = "menu__food-name">${item.heading}</h3>
-        <span class = "menu__food-price">${item.price}</span>
-        <p class = "menu__food-desc">${item.desc}</p>
-        <form class = "menu__add-to-cart">
-            <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
-            <button type = "submit" class = "menu__cart-button" for = "submit">Add to cart</button>
-        </form>
-    </div>`
+        return `
+        <div class = "menu__food-wrapper">
+            <div class = "menu__food-card">
+                <picture class = "menu__food-img">
+                <img src = "${item.image}" width = "150" height = "250" decoding = "async" loading = "lazy">
+                </picture>
+                <h3 class = "menu__food-name">${item.heading}</h3>
+                <span class = "menu__food-price">${item.price}</span>
+                <p class = "menu__food-desc">${item.desc}</p>
+                <form class = "menu__add-to-cart">
+                    <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
+                    <button type = "submit" class = "menu__cart-button" for = "submit">Add to cart</button>
+                </form>
+            </div>
+        </div> `
     })
     displayMenu = displayMenu.join("");
     parentMenu.innerHTML = displayMenu;

@@ -563,20 +563,29 @@ body {
 }
 .menu__food-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+.menu__food-card {
+  display: flex;
   flex-direction: column;
   gap: 1em;
   padding: 1em;
   background-color: whitesmoke;
-  width: 100%;
-  height: 100%;
   border-radius: 5px;
   align-items: start;
-  margin-top: 2em;
 }
 .menu__food-img {
   width: 100%;
-  object-fit: contain;
+  height: 17em;
+}
+.menu__food-img img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 5px;
 }
 .menu__food-name {
