@@ -89,43 +89,38 @@
         }
     }
 
-    &__img{
-        width:90%;
-        height:100%;
-        display: block;
-        border-radius: 60px;
-        overflow: hidden;
-        clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%);
+    &__image-container{
+        position: relative;
         margin-top:4em;
-        max-width:20em;
-        
-        img{
-            width:100%;
-            height:100%;
-            object-fit: contain;
-            overflow: hidden;
-            
-        }
     }
-    
-    
-}
 
-.image-container{
-    position: relative;
-    max-width: 30em;
-    .utility-img{
-        border-radius: 300px;
-        width: 5em;
-        height: 5em;
+    &__image-utility{
+        clip-path: circle(45% at 50% 50%);
+        width: 7em;
+        height: 7em;
         display: block;
         position: absolute;
         top:5em;
         left:2em;
         z-index: 1;
-        max-width:5em;
-       
     }
-}
 
+    &__img{
+        display: block;
+        border-radius: 2em;
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%);
+        width:85%;
+        height:100%;
+       opacity: 0.80;
+        overflow: hidden;
+        img{
+            width:100%;
+            height:100%;
+            object-fit: contain;
+           
+        }
+    }
+    
+    
+}
 
