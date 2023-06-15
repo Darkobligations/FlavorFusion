@@ -83,17 +83,17 @@ const allfoodItems = [
     },
     {
         id:7,
-        image:"/image/menuImages/Savory Medley.jpg",
+        image:"/image/menuImages/Crispy Fried Calamari.jpg",
         category:"sides",
-        heading:"Savory Medley",
+        heading:"Crispy Fried Calamari",
         price:"$6.50 USD",
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
     },
     {
         id:8,
-        image:"/image/menuImages/Bean Bliss.jpg",
+        image:"/image/menuImages/Potato Wedges.jpg",
         category:"sides",
-        heading:"Bean Bliss",
+        heading:"Potato Wedges",
         price:"$4.75 USD",
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
     },
@@ -115,17 +115,17 @@ const allfoodItems = [
     },
     {
         id:11,
-        image:"/image/menuImages/Sunset Serenade.jpg",
+        image:"/image/menuImages/Water.jpg",
         category:"drinks",
-        heading:"Sunset Serenade",
+        heading:"Water",
         price:"$5.20 USD",
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
     },
     {
         id:12,
-        image:"/image/menuImages/Tropical Bliss.jpg",
+        image:"/image/menuImages/Strawberry Swirl.jpg",
         category:"drinks",
-        heading:"Tropical Bliss",
+        heading:"Strawberry Swirl",
         price:"$5.20 USD",
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
     },

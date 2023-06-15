@@ -503,6 +503,51 @@ body {
   display: block;
 }
 
+#operation-section {
+  padding: var(--section-padding);
+  letter-spacing: 0.5px;
+}
+
+.operation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  position: relative;
+}
+.operation__heading {
+  font-size: var(--headerTwo-size);
+}
+.operation__content {
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  align-items: center;
+}
+.operation__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 10em;
+  border-radius: 45px;
+}
+.operation__context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.operation__context-heading {
+  font-size: var(--headerThree-size);
+}
+.operation__dotted-line {
+  width: 1px;
+  height: 130px;
+  display: block;
+  border-left: dashed rgba(0, 0, 0, 0.315) 1px;
+  background-color: transparent;
+}
+
 #menu-section {
   padding: var(--section-padding);
   letter-spacing: 1px;
