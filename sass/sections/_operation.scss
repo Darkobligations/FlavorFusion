@@ -1,6 +1,7 @@
 #operation-section{
     padding:var(--section-padding);
     letter-spacing: .5px;
+   
 }
 
 .operation{
@@ -9,13 +10,12 @@
     align-items: center;
     justify-content: center;
     gap:2em;
-    padding:var(--section-padding);
-    padding-left:0;
-    padding-right:0;
+    padding:var(--container-padding);
     position: relative;
     &__heading{
         font-size:var(--headerTwo-size);
         margin-bottom:1em;
+        color:var(--secondaryUtil-color);
     }
 
     &__content{
