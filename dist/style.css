@@ -11,7 +11,7 @@ html {
 
 h1, h2, h3 {
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.4em;
   margin: 0;
 }
 
@@ -22,6 +22,7 @@ ul {
 
 p {
   margin: 0;
+  line-height: 1.6em;
 }
 
 a, a:visited, a:active {
@@ -333,7 +334,7 @@ body {
   width: 100%;
   height: 48em;
   z-index: -1;
-  clip-path: polygon(0 0, 100% 0%, 100% 65%, 0 57%);
+  clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 62%);
   background-color: var(--secondaryBG-color);
   content: "";
 }
@@ -371,7 +372,6 @@ body {
 .landing__paragraph {
   font-size: var(--sub-head);
   text-align: center;
-  line-height: 25px;
 }
 .landing .landing__button {
   padding: 1.3em 1em;
@@ -405,7 +405,7 @@ body {
 .landing__image-container {
   position: relative;
   margin-top: 4em;
-  max-width: 25em;
+  max-width: 15em;
 }
 .landing__image-utility {
   clip-path: circle(45% at 50% 50%);
@@ -416,13 +416,15 @@ body {
   top: 5em;
   left: 2em;
   z-index: 1;
+  display: none;
 }
 .landing__img {
   display: block;
-  border-radius: 2em;
-  clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%);
-  width: 85%;
+  border-radius: 3em;
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  width: 100%;
   height: 100%;
+  transform: rotate(90deg);
   overflow: hidden;
   z-index: -1;
   position: relative;
@@ -432,8 +434,8 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-  background: var(--secondaryUtil-color);
-  opacity: 0.1;
+  background: black;
+  opacity: 0.4;
   z-index: 1;
   position: absolute;
 }
@@ -469,19 +471,7 @@ body {
 }
 .about__heading {
   font-size: var(--headerTwo-size);
-  line-height: 45px;
   color: var(--secondaryUtil-color);
-}
-.about .background-text {
-  display: block;
-  opacity: 0.03;
-  position: absolute;
-  top: 3em;
-  width: 100%;
-  height: 100%;
-}
-.about__paragraph {
-  line-height: 27px;
 }
 .about__button {
   padding: 1.3em 3em;
@@ -519,6 +509,16 @@ body {
   object-fit: contain;
   z-index: 1;
   display: block;
+}
+
+.background-text {
+  display: block;
+  opacity: 0.03;
+  position: absolute;
+  top: 3em;
+  width: 100%;
+  height: 100%;
+  max-width: 35em;
 }
 
 #operation-section {
@@ -567,9 +567,6 @@ body {
 .operation__context-heading {
   font-size: var(--headerThree-size);
 }
-.operation__context-paragraph {
-  line-height: 25px;
-}
 .operation__dotted-line {
   width: 1px;
   height: 130px;
@@ -604,10 +601,6 @@ body {
 }
 .menu__heading {
   font-size: var(--headerTwo-size);
-  line-height: 45px;
-}
-.menu__paragraph {
-  line-height: 25px;
 }
 .menu__paragraph span {
   color: var(--secondaryUtil-color);
@@ -700,4 +693,59 @@ body {
   color: var(--body-color);
   margin-top: 2em;
   text-align: center;
+}
+
+#contact-section {
+  padding: var(--section-padding);
+  letter-spacing: 1px;
+}
+
+.contact {
+  padding: var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1.5em;
+  position: relative;
+}
+.contact__heading {
+  font-size: var(--headerTwo-size);
+  color: var(--secondaryUtil-color);
+}
+.contact__img {
+  position: relative;
+  border-radius: 1em;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.contact__img::before {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: black;
+  opacity: 0.4;
+  position: absolute;
+}
+.contact__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.contact__button {
+  padding: 1.3em 3em;
+  background-color: var(--util-color);
+  border-radius: 5px;
+  color: var(--body-color);
+  z-index: 1;
+  margin-top: 1.5em;
+}
+.contact .background-text {
+  top: 0;
+  transform: translateY(-100px);
 }/*# sourceMappingURL=style.css.map */

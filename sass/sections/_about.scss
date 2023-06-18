@@ -24,22 +24,7 @@
     
     &__heading{
         font-size:var(--headerTwo-size);
-        line-height: 45px;
         color: var( --secondaryUtil-color);
-    }
-
-    .background-text{
-        display: block;
-
-        opacity: .03;
-        position: absolute;
-        top:3em;
-        width:100%;
-        height:100%;
-    }
-
-    &__paragraph{
-        line-height: 27px;
     }
 
     &__button{
@@ -84,3 +69,12 @@
     }
 }
 
+.background-text{
+    display: block;
+    opacity: .03;
+    position: absolute;
+    top:3em;
+    width:100%;
+    height:100%;
+    max-width: 35em;
+}

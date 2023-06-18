@@ -66,7 +66,7 @@
                     <li><a class = "navigation__links" aria-label = "Go to home page" href = "/">Home</a></li>
                     <li><a class = "navigation__links" aria-label = "Go to about section" href = "">Order</a></li>
                     <li><a class = "navigation__links" aria-label = "Go to projects section" href = "">About</a></li>
-                    <li><a class = "navigation__links" aria-label = "Go to contact section" href = "">Contact</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to contact us" href = "mailto:someone@thissite.com">Contact</a></li>
                 </ul>
             </nav>
                 <!--ORDER MENU-->
@@ -136,7 +136,7 @@
             <div class = "about__info">
                 <h2 class = "about__heading">Discover Culinary Delivery: Flavor Fusion!</h2>
                 <img src = "/image/Utility/Background-text.svg
-                " class = "background-text" loading = "lazy" width = "50" height = "30" decoding = "async" aria-hidden = "true" />
+                " class = "background-text" loading = "lazy" width = "50" height = "30" decoding = "async" aria-hidden = "true"/>
                 <p class = "about__paragraph">
                     Flavor Fusion is your gateway to an exceptional culinary journey, offering a wide range of delectable dishes delivered right to your doorstep. With a dedication to quality and flavor, we carefully craft each meal to deliver an unforgettable dining experience.
                 </p>
@@ -226,11 +226,23 @@
 
      
      <!------------------------------------------------>
-     <!---              FORM SECTION                --->
+     <!---              CONTACT SECTION             --->
      <!------------------------------------------------>
 
-    <section id = "">
-         
+    <section id = "contact-section">
+        <div class = "contact">
+            <img class = "background-text" src = "/image/Utility/Background-text.svg" loading = "lazy" width = "50" height = "30" decoding = "async" aria-hidden = "true"/>
+            <h2 class = "contact__heading">Conveniently order takeaway by contacting our store.
+            </h2>
+            <p class = "contact__paragraph">
+                Indulge in the utmost flexibility and convenience as you take full control of your dining experience by reaching out to our store, where you can effortlessly request and enjoy a delectable takeaway meal that perfectly aligns with your schedule and preferences.</p>
+            <a href = "mailto:someone@thissite.com" class = "contact__button" aria-label = "Go to our contact page">Contact Us</a>
+            <picture class = "contact__img" aria-hidden="true">
+                <source media ="(max-width: 600px)" srcset = "image/sectionImages/contact-mobileImg.jpg">
+                <source media ="(min-width: 601px)" srcset = "image/sectionImages/contact-desktopImg.jpg">
+                <img src = "image/sectionImages/contact-desktopImg.jpg" width = 300 height = 400 decoding="async" loading="lazy">
+            </picture>
+        </div>
     </section>
 
      

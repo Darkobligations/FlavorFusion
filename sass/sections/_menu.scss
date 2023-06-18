@@ -23,12 +23,9 @@
 
     &__heading{
         font-size: var(--headerTwo-size);
-        line-height: 45px;
     }
 
     &__paragraph{
-        line-height: 25px;
-
         span{
             color:var(--secondaryUtil-color);
             border-bottom: 1px solid var(--secondaryUtil-color);
