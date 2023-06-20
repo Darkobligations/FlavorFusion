@@ -704,6 +704,13 @@ body {
   padding: var(--container-padding);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+  position: relative;
+}
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
   align-items: start;
   justify-content: center;
   gap: 1.5em;
@@ -745,7 +752,43 @@ body {
   z-index: 1;
   margin-top: 1.5em;
 }
-.contact .background-text {
-  top: 0;
-  transform: translateY(-100px);
+
+#footer-section {
+  letter-spacing: 0.5px;
+  padding: var(--section-padding);
+  background-color: var(--secondaryBG-color);
+}
+
+.footer {
+  display: flex;
+  padding: var(--container-padding);
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  list-style: none;
+}
+.footer__ul li {
+  font-size: var(--footer-size);
+}
+.footer__links {
+  text-decoration: none;
+  color: var(--body-color);
+}
+.footer__links:hover {
+  transform: scale(1.1);
+}
+.footer__heading {
+  font-size: var(--body-size);
+  font-weight: bolder;
+}
+.footer__social-icons {
+  width: 1.5em;
+  height: 1.5em;
+  max-width: 2em;
+  object-fit: contain;
 }/*# sourceMappingURL=style.css.map */
