@@ -135,34 +135,34 @@
 
     &__order-item-container{
         display: flex;
-        flex-grow: 1;
+        gap:1.5em;
         width:100%;
         justify-content: space-between;
         padding:1em;
+        flex-direction: column;
     }
 
     &__order-item{
         display: flex;
         gap:.80em;
+        width:100%;
+      
     }
 
     &__order-image{
         width:4em;
         height:3.5em;
         border-radius: 5px;
-        
     }
 
     &__order-flex-col-right{
         display: flex;
         flex-direction: column;
         gap:.30em;
-        
     }
 
     &__order-item-heading{
         font-weight: bold;
-
     }
 
     &__order-item-price{
@@ -172,19 +172,25 @@
     &__order-item-remove{
         color:var(--secondaryUtil-color);
         cursor:pointer;
-
+        width:55%;
+        text-align: start;
+       
         &:hover{
             opacity: .85;
         }
+    }
+
+    &__order-quantity{
+        margin-left:auto;
     }
     
 
     
 
     .checkout{
+        margin-top:auto;
         display: flex;
         flex-direction: column;
-        justify-content:flex-end;
         padding:1.5em;
         width:100%;
         border-top:1px rgba(0, 0, 0, 0.301) solid;

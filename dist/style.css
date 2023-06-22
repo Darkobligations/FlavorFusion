@@ -195,14 +195,16 @@ body {
 }
 .navigation__order-item-container {
   display: flex;
-  flex-grow: 1;
+  gap: 1.5em;
   width: 100%;
   justify-content: space-between;
   padding: 1em;
+  flex-direction: column;
 }
 .navigation__order-item {
   display: flex;
   gap: 0.8em;
+  width: 100%;
 }
 .navigation__order-image {
   width: 4em;
@@ -223,14 +225,19 @@ body {
 .navigation__order-item-remove {
   color: var(--secondaryUtil-color);
   cursor: pointer;
+  width: 55%;
+  text-align: start;
 }
 .navigation__order-item-remove:hover {
   opacity: 0.85;
 }
+.navigation__order-quantity {
+  margin-left: auto;
+}
 .navigation .checkout {
+  margin-top: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding: 1.5em;
   width: 100%;
   border-top: 1px rgba(0, 0, 0, 0.301) solid;
