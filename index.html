@@ -81,17 +81,19 @@
                         <div class = "navigation__order-flex-col-right">
                             <span class = "navigation__order-item-heading">Rocket Burger</span>
                             <span class = "navigation__order-item-price">$7.20 USD</span>
-                            <span class = "navigation__order-item-remove">Remove</span>
+                            <button class = "btn-danger navigation__order-item-remove">Remove</button>
                         </div>
                         <div class = "navigation__order-quantity">
-                            <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
+                            <img src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                            <span class = "order-capacity">0</span>
+                            <img src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
                         </div>
                     </div>  
                 </div>
                 <div class = "checkout">
                     <div class = "subtotal">
                         <span> Subtotal</span>
-                        <span class = "price">$4.00</span>
+                        <span class = "price">$0.00</span>
                     </div>
                     <button>Continue to Checkout</button>
                 </div>
@@ -224,10 +226,14 @@
                     <h3 class = "menu__food-name">Rocket Burger</h3>
                     <span class = "menu__food-price">$7.20 USD</span>
                     <p class = "menu__food-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!</p>
-                    <form class = "menu__add-to-cart">
-                        <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
-                        <button class = "menu__cart-button add-to-cart" for = "submit">Add to cart</button>
-                    </form>
+                    <div class = "menu__add-to-cart">
+                        <div class = "menu__order-quantity">
+                            <img class = "menu__order-increase" src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                            <span class = "menu-capacity">0</span>
+                            <img class = "menu__order-decrease" src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                        </div>
+                        <button class = "menu__cart-button add-to-cart">Add to cart</button>
+                    </div>
                 </div>
             </div>
             <a class = "menu__button-end" aria-label = "Go to see our full menu" href = "">Our Full Menu</a>

@@ -118,12 +118,25 @@
         padding:.80em 0 0.80em .70em;
     }
 
+    &__order-quantity{
+        display: flex;
+        align-items: center;
+        gap:.70em;
+
+        img{
+            cursor: pointer;
+        }
+    }
+
     &__cart-button{
         background-color: var(--util-color);
         border:none;
         border-radius: 5px;
+        padding:1em;
         width:40%;
         font-size:var(--body-size);
+        cursor: pointer;
+        margin-left:1em;
     }
 
     &__button-end{

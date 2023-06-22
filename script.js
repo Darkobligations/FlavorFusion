@@ -210,10 +210,14 @@ function displayMenuItems(menuitems){
                 <h3 class = "menu__food-name">${item.heading}</h3>
                 <span class = "menu__food-price">${item.price}</span>
                 <p class = "menu__food-desc">${item.desc}</p>
-                <form class = "menu__add-to-cart">
-                    <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
-                    <button type = "submit" class = "menu__cart-button add-to-cart" for = "submit">Add to cart</button>
-                </form>
+                <div class = "menu__add-to-cart">
+                    <div class = "menu__order-quantity">
+                        <img class = "menu__order-increase" src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                        <span class = "menu-capacity">0</span>
+                        <img class = "menu__order-decrease" src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                    </div>
+                    <button onclick = "addToCart(${item.id})" class = "menu__cart-button">Add to cart</button>
+                </div>
             </div>
         </div> `
     })
@@ -223,3 +227,86 @@ function displayMenuItems(menuitems){
 
 //Start of shopping cart
 
+var removeCartItem = document.querySelectorAll('.btn-danger');
+const cartItem = document.querySelector('.navigation__order-item-container');
+
+
+removeCartItem.forEach(function(button){
+    button.addEventListener('click', function(e){
+        let buttonRemove = e.currentTarget;
+        buttonRemove.parentElement.parentElement.remove();
+    })
+    
+})
+        
+//cart array
+let cart = [];
+
+function addToCart(id){
+    // check if product already exsist in cart
+    if(cart.some((item) => item.id === id)){
+        alert("Product already in cart!")
+    }
+    else{
+        const item = allfoodItems.find((product) => product.id === id)
+        cart.push({
+            ...item,
+            numberOfUnits : 1,
+        });
+    }
+
+    updateCart();
+    
+}
+
+function updateCart(){
+    renderCartItems();
+    // renderSubtotal();
+}
+
+//render cart items
+function renderCartItems(){
+    cartItem.innerHTML = "";
+    cart.forEach((item) => {
+        cartItem.innerHTML += `
+        <div class = "navigation__order-item">
+            <img class = "navigation__order-image" src = "${item.image}" width = 50 height = 50 decoding="async" aria-hidden="true" alt = "${item.image}">
+            <div class = "navigation__order-flex-col-right">
+                <span class = "navigation__order-item-heading">${item.heading}</span>
+                <span class = "navigation__order-item-price">${item.price}</span>
+                <button class = "btn-danger navigation__order-item-remove">Remove</button>
+            </div>
+            <div class = "navigation__order-quantity">
+                <img onclick = "changeNumberOfUnits('plus', ${item.id})" class = "menu__order-increase" src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                <span class = "order-capacity">${item.numberOfUnits}</span>
+                <img onclick = "changeNumberOfUnits('minus', ${item.id})" class = "menu__order-decrease" src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
+            </div>
+        </div>  
+        `;
+    });
+}
+
+//change number of units for an item
+function changeNumberOfUnits(action, id){
+    cart = cart.map((item) => {
+        let numberOfUnits = item.numberOfUnits;
+
+        if(item.id === id){
+            if(action === "minus"){
+                numberOfUnits--;
+                if(numberOfUnits <= 0){
+                    numberOfUnits = 0;
+                }
+            }else if (action === "plus") {
+                numberOfUnits++;
+            }
+        }
+
+        return {
+            ...item,
+           numberOfUnits,
+        };
+    });
+
+    updateCart();
+}

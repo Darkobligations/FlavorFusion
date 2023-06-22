@@ -114,6 +114,8 @@ body {
   display: flex;
   padding: 1.3em;
   align-items: center;
+  position: fixed;
+  z-index: 10;
 }
 
 .Navigation-bar.active {
@@ -205,6 +207,7 @@ body {
   display: flex;
   gap: 0.8em;
   width: 100%;
+  align-items: center;
 }
 .navigation__order-image {
   width: 4em;
@@ -225,14 +228,23 @@ body {
 .navigation__order-item-remove {
   color: var(--secondaryUtil-color);
   cursor: pointer;
-  width: 55%;
+  border: none;
   text-align: start;
+  margin-right: auto;
+  font-size: var(--body-size);
+  background-color: transparent;
 }
 .navigation__order-item-remove:hover {
   opacity: 0.85;
 }
 .navigation__order-quantity {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.navigation__order-quantity img {
+  cursor: pointer;
 }
 .navigation .checkout {
   margin-top: auto;
@@ -716,12 +728,23 @@ body {
   font-size: var(--body-size);
   padding: 0.8em 0 0.8em 0.7em;
 }
+.menu__order-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.menu__order-quantity img {
+  cursor: pointer;
+}
 .menu__cart-button {
   background-color: var(--util-color);
   border: none;
   border-radius: 5px;
+  padding: 1em;
   width: 40%;
   font-size: var(--body-size);
+  cursor: pointer;
+  margin-left: 1em;
 }
 .menu__button-end {
   padding: 1.3em 4em;

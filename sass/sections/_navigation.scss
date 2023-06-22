@@ -48,6 +48,8 @@
     display:flex;
     padding:1.3em;
     align-items: center;
+    position: fixed;
+    z-index: 10;
 }
 
 .Navigation-bar.active{
@@ -140,13 +142,14 @@
         justify-content: space-between;
         padding:1em;
         flex-direction: column;
+        
     }
 
     &__order-item{
         display: flex;
         gap:.80em;
         width:100%;
-      
+        align-items: center;
     }
 
     &__order-image{
@@ -172,9 +175,12 @@
     &__order-item-remove{
         color:var(--secondaryUtil-color);
         cursor:pointer;
-        width:55%;
+        border:none;
         text-align: start;
-       
+        margin-right:auto;
+        font-size: var(--body-size);
+        background-color: transparent;
+        
         &:hover{
             opacity: .85;
         }
@@ -182,6 +188,13 @@
 
     &__order-quantity{
         margin-left:auto;
+        display: flex;
+        align-items: center;
+        gap:.70em;
+    
+        img{
+            cursor: pointer;
+        }
     }
     
 
