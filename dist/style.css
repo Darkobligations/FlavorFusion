@@ -48,7 +48,7 @@ body {
   --headerTwo-size:clamp(2.5rem, 5vw, 2.6rem);
   --headerThree-size:clamp(1.4rem, 2vw, 1.7rem);
   --body-size:1rem;
-  --footer-size:clamp(0.875rem, 1.5vw, 0.938rem);
+  --footer-size:clamp(0.95rem, 1.5vw, 0.938rem);
   --font-weight:400;
   --font-weight:700;
   --navbar-height:94.93px;
@@ -671,6 +671,7 @@ body {
   display: flex;
   gap: 0.4em;
   width: 100%;
+  margin-top: 1em;
 }
 .menu__capacity {
   border-radius: 5px;
@@ -762,14 +763,21 @@ body {
 .footer {
   display: flex;
   padding: var(--container-padding);
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  gap: 5em;
+  flex-direction: column;
+  padding-bottom: 0em;
+}
+.footer__links-wrapper {
+  justify-content: center;
+  gap: 5em;
+  display: flex;
+  flex-wrap: wrap;
 }
 .footer__ul {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  align-items: center;
   list-style: none;
 }
 .footer__ul li {
@@ -785,10 +793,31 @@ body {
 .footer__heading {
   font-size: var(--body-size);
   font-weight: bolder;
+  position: relative;
+}
+.footer__heading::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: var(--secondaryUtil-color);
+  display: block;
+  margin: 0.2em 0;
+}
+.footer__socials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
 }
 .footer__social-icons {
   width: 1.5em;
   height: 1.5em;
   max-width: 2em;
   object-fit: contain;
+}
+.footer__copyright {
+  text-align: center;
+  line-height: 25px;
+}
+.footer__copyright span {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */

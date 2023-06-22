@@ -39,7 +39,7 @@ const allfoodItems = [
         category:"burgers",
         heading:"Rocket Burger",
         price:"$7.20 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"A celestial delight featuring a harmonious blend of fresh lettuce, succulent tomatoes, and savory cheese."
     },
     {
         id:2,
@@ -47,7 +47,7 @@ const allfoodItems = [
         category:"burgers",
         heading:"Flash Burger",
         price:"$5.20 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Flavor-packed delight with zesty tomatoes, creamy cheese, tangy pickles, and crisp lettuce. Get ready for a taste explosion!"
     },
     {
         id:3,
@@ -55,7 +55,7 @@ const allfoodItems = [
         category:"burgers",
         heading:"Blaze Burger",
         price:"$9.60 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Fiery combination of fresh lettuce, juicy tomatoes, melted cheese, seasoned buns, and a pop of flavor from purple onions."
     },
     {
         id:4,
@@ -63,7 +63,7 @@ const allfoodItems = [
         category:"burgers",
         heading:"Sizzl-Burger",
         price:"$4.00 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Sizzling sensation of flavor featuring crispy onion rings, savory bacon, melted cheese, and a tangy hint of ketchup."
     },
     {
         id:5,
@@ -71,7 +71,7 @@ const allfoodItems = [
         category:"sides",
         heading:"Garden Symphony",
         price:"$8.50 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"This refreshing salad showcases crisp lettuce, briny olives, nutritious spinach, hearty bread croutons, roasted red peppers, and creamy avocado. "
     },
     {
         id:6,
@@ -79,7 +79,7 @@ const allfoodItems = [
         category:"sides",
         heading:"Golden Crunch",
         price:"$5.50 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"A bowl of fries topped with parsley, served with tangy BBQ sauce. Indulge in the ultimate crispy delight!"
     },
     {
         id:7,
@@ -87,7 +87,7 @@ const allfoodItems = [
         category:"sides",
         heading:"Crispy Fried Calamari",
         price:"$6.50 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:" Tender calamari rings, lightly battered and fried to a golden crisp. Served with zesty honey mustard sauce for the perfect seafood indulgence."
     },
     {
         id:8,
@@ -95,7 +95,7 @@ const allfoodItems = [
         category:"sides",
         heading:"Potato Wedges",
         price:"$4.75 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Golden-brown, crispy delights that offer a fluffy interior. These seasoned wedges are a timeless favorite, perfect as a satisfying side or snack. "
     },
     {
         id:9,
@@ -103,7 +103,7 @@ const allfoodItems = [
         category:"drinks",
         heading:"Coca-Cola",
         price:"$3.00 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Coca-Cola - the iconic, refreshing soft drink with a perfect balance of sweetness and effervescence. Sip and enjoy!"
     },
     {
         id:10,
@@ -111,7 +111,7 @@ const allfoodItems = [
         category:"drinks",
         heading:"Melon Splash",
         price:"$4.50 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"A refreshing and invigorating beverage that captures the essence of juicy melons. "
     },
     {
         id:11,
@@ -119,7 +119,7 @@ const allfoodItems = [
         category:"drinks",
         heading:"Water",
         price:"$5.20 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"This transparent, odorless, and tasteless beverage is nature's gift, hydrating and revitalizing our bodies."
     },
     {
         id:12,
@@ -127,7 +127,7 @@ const allfoodItems = [
         category:"drinks",
         heading:"Strawberry Swirl",
         price:"$5.20 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"A delightful treat that combines the luscious sweetness of strawberries with a swirl of indulgence."
     },
 ]
 
@@ -138,7 +138,7 @@ const initialDisplay = [
         category:"burgers",
         heading:"Rocket Burger",
         price:"$7.20 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"A celestial delight featuring a harmonious blend of fresh lettuce, succulent tomatoes, and savory cheese."
     },
     {
         id:2,
@@ -146,7 +146,7 @@ const initialDisplay = [
         category:"burgers",
         heading:"Flash Burger",
         price:"$5.20 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Flavor-packed delight with zesty tomatoes, creamy cheese, tangy pickles, and crisp lettuce. Get ready for a taste explosion!"
     },
     {
         id:3,
@@ -154,7 +154,7 @@ const initialDisplay = [
         category:"burgers",
         heading:"Blaze Burger",
         price:"$9.60 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Fiery combination of fresh lettuce, juicy tomatoes, melted cheese, seasoned buns, and a pop of flavor from purple onions."
     },
     {
         id:4,
@@ -162,7 +162,7 @@ const initialDisplay = [
         category:"burgers",
         heading:"Sizzl-Burger",
         price:"$4.00 USD",
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!"
+        desc:"Sizzling sensation of flavor featuring crispy onion rings, savory bacon, melted cheese, and a tangy hint of ketchup."
     }
 ]
 
