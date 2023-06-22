@@ -3,6 +3,7 @@ let menuOpen = document.querySelector('.navigation__wrapper');
 let navigation__toggle = document.querySelector('.navigation__toggle');
 let navigationBar = document.getElementById('navigation-bar');
 let menuToggle = document.getElementById('menuToggle');
+
 //Navigation menu Open
 menuToggle.addEventListener('click', function(){
     navigation__toggle.classList.toggle('active');
@@ -211,7 +212,7 @@ function displayMenuItems(menuitems){
                 <p class = "menu__food-desc">${item.desc}</p>
                 <form class = "menu__add-to-cart">
                     <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
-                    <button type = "submit" class = "menu__cart-button" for = "submit">Add to cart</button>
+                    <button type = "submit" class = "menu__cart-button add-to-cart" for = "submit">Add to cart</button>
                 </form>
             </div>
         </div> `
@@ -219,3 +220,6 @@ function displayMenuItems(menuitems){
     displayMenu = displayMenu.join("");
     parentMenu.innerHTML = displayMenu;
 }
+
+//Start of shopping cart
+

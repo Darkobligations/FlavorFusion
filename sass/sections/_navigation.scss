@@ -133,11 +133,53 @@
         }
     }
 
-    .orders{
+    &__order-item-container{
         display: flex;
         flex-grow: 1;
         width:100%;
+        justify-content: space-between;
+        padding:1em;
     }
+
+    &__order-item{
+        display: flex;
+        gap:.80em;
+    }
+
+    &__order-image{
+        width:4em;
+        height:3.5em;
+        border-radius: 5px;
+        
+    }
+
+    &__order-flex-col-right{
+        display: flex;
+        flex-direction: column;
+        gap:.30em;
+        
+    }
+
+    &__order-item-heading{
+        font-weight: bold;
+
+    }
+
+    &__order-item-price{
+        font-size:15px;
+    }
+
+    &__order-item-remove{
+        color:var(--secondaryUtil-color);
+        cursor:pointer;
+
+        &:hover{
+            opacity: .85;
+        }
+    }
+    
+
+    
 
     .checkout{
         display: flex;

@@ -75,8 +75,18 @@
                     <span class = "order-heading">Your Order</span>
                     <button aria-label = "close the order menu" id = "closeToggle" class = "closeToggle"><span class = "close-span" aria-hidden = "true"></span></button>
                 </div>
-                <div class = "orders">
-                    
+                <div class = "navigation__order-item-container">
+                    <div class = "navigation__order-item">
+                        <img class = "navigation__order-image" src = "/image/menuImages/Rocket Burger.jpg" width = 50 height = 50 decoding="async" aria-hidden="true">
+                        <div class = "navigation__order-flex-col-right">
+                            <span class = "navigation__order-item-heading">Rocket Burger</span>
+                            <span class = "navigation__order-item-price">$7.20 USD</span>
+                            <span class = "navigation__order-item-remove">Remove</span>
+                        </div>
+                    </div>
+                    <div class = "orders__quantity">
+                        <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
+                    </div>
                 </div>
                 <div class = "checkout">
                     <div class = "subtotal">
@@ -216,7 +226,7 @@
                     <p class = "menu__food-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!</p>
                     <form class = "menu__add-to-cart">
                         <input value = "1" class = "menu__capacity" type = "number"  min = "1" max = "10" inputmode="numeric" id = "menu-capacity" name = "menu-capacity">
-                        <button type = "submit" class = "menu__cart-button" for = "submit">Add to cart</button>
+                        <button class = "menu__cart-button add-to-cart" for = "submit">Add to cart</button>
                     </form>
                 </div>
             </div>

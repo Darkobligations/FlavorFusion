@@ -1,17 +1,19 @@
 #footer-section{
     letter-spacing: .5px;
     padding:var( --section-padding);
-    background-color: var(--secondaryBG-color);
-   
+    padding-left:0;
+    padding-right:0;
+    padding-bottom:0;
 }
 
 .footer{
+    background-color: var(--secondaryBG-color);
     display: flex;
     padding:var(--container-padding);
     justify-content: center;
     gap:5em;
     flex-direction: column;
-    padding-bottom:0em;
+    
     
     &__links-wrapper{
         justify-content: center;
@@ -34,9 +36,9 @@
     &__links{
         text-decoration: none;
         color: var( --body-color);
-        
+
         &:hover{
-            transform: scale(1.1);
+            color:var(--secondaryUtil-color);
         }
     }
 
@@ -67,7 +69,11 @@
         height:1.5em;
         max-width: 2em;
         object-fit: contain;
-       
+        cursor: pointer;
+
+       &:hover{
+        transform: scale(1.1);
+       }
     }
 
     &__copyright{
