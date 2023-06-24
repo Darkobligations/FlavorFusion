@@ -39,7 +39,7 @@ const allfoodItems = [
         image:"/image/menuImages/Rocket Burger.jpg",
         category:"burgers",
         heading:"Rocket Burger",
-        price:"$7.20 USD",
+        price: 7.27,
         desc:"A celestial delight featuring a harmonious blend of fresh lettuce, succulent tomatoes, and savory cheese."
     },
     {
@@ -47,7 +47,7 @@ const allfoodItems = [
         image:"/image/menuImages/Flash Burger.jpg",
         category:"burgers",
         heading:"Flash Burger",
-        price:"$5.20 USD",
+        price: 5.29,
         desc:"Flavor-packed delight with zesty tomatoes, creamy cheese, tangy pickles, and crisp lettuce. Get ready for a taste explosion!"
     },
     {
@@ -55,7 +55,7 @@ const allfoodItems = [
         image:"/image/menuImages/Blaze Burger.jpg",
         category:"burgers",
         heading:"Blaze Burger",
-        price:"$9.60 USD",
+        price: 9.61,
         desc:"Fiery combination of fresh lettuce, juicy tomatoes, melted cheese, seasoned buns, and a pop of flavor from purple onions."
     },
     {
@@ -63,7 +63,7 @@ const allfoodItems = [
         image:"/image/menuImages/sizzl-Burger.jpg",
         category:"burgers",
         heading:"Sizzl-Burger",
-        price:"$4.00 USD",
+        price: 4.05,
         desc:"Sizzling sensation of flavor featuring crispy onion rings, savory bacon, melted cheese, and a tangy hint of ketchup."
     },
     {
@@ -71,7 +71,7 @@ const allfoodItems = [
         image:"/image/menuImages/Garden Symphony.jpg",
         category:"sides",
         heading:"Garden Symphony",
-        price:"$8.50 USD",
+        price: 8.52,
         desc:"This refreshing salad showcases crisp lettuce, briny olives, nutritious spinach, hearty bread croutons, roasted red peppers, and creamy avocado. "
     },
     {
@@ -79,7 +79,7 @@ const allfoodItems = [
         image:"/image/menuImages/Golden Crunch.jpg",
         category:"sides",
         heading:"Golden Crunch",
-        price:"$5.50 USD",
+        price: 5.54,
         desc:"A bowl of fries topped with parsley, served with tangy BBQ sauce. Indulge in the ultimate crispy delight!"
     },
     {
@@ -87,7 +87,7 @@ const allfoodItems = [
         image:"/image/menuImages/Crispy Fried Calamari.jpg",
         category:"sides",
         heading:"Crispy Fried Calamari",
-        price:"$6.50 USD",
+        price: 6.57,
         desc:" Tender calamari rings, lightly battered and fried to a golden crisp. Served with zesty honey mustard sauce for the perfect seafood indulgence."
     },
     {
@@ -95,7 +95,7 @@ const allfoodItems = [
         image:"/image/menuImages/Potato Wedges.jpg",
         category:"sides",
         heading:"Potato Wedges",
-        price:"$4.75 USD",
+        price: 4.75,
         desc:"Golden-brown, crispy delights that offer a fluffy interior. These seasoned wedges are a timeless favorite, perfect as a satisfying side or snack. "
     },
     {
@@ -103,7 +103,7 @@ const allfoodItems = [
         image:"/image/menuImages/Coca-Cola.jpg",
         category:"drinks",
         heading:"Coca-Cola",
-        price:"$3.00 USD",
+        price: 3.10,
         desc:"Coca-Cola - the iconic, refreshing soft drink with a perfect balance of sweetness and effervescence. Sip and enjoy!"
     },
     {
@@ -111,7 +111,7 @@ const allfoodItems = [
         image:"/image/menuImages/Melon Splash.jpg",
         category:"drinks",
         heading:"Melon Splash",
-        price:"$4.50 USD",
+        price: 4.55,
         desc:"A refreshing and invigorating beverage that captures the essence of juicy melons. "
     },
     {
@@ -119,7 +119,7 @@ const allfoodItems = [
         image:"/image/menuImages/Water.jpg",
         category:"drinks",
         heading:"Water",
-        price:"$5.20 USD",
+        price: 3.32,
         desc:"This transparent, odorless, and tasteless beverage is nature's gift, hydrating and revitalizing our bodies."
     },
     {
@@ -127,45 +127,11 @@ const allfoodItems = [
         image:"/image/menuImages/Strawberry Swirl.jpg",
         category:"drinks",
         heading:"Strawberry Swirl",
-        price:"$5.20 USD",
+        price: 5.25,
         desc:"A delightful treat that combines the luscious sweetness of strawberries with a swirl of indulgence."
     },
 ]
 
-const initialDisplay = [
-    {
-        id:1,
-        image:"/image/menuImages/Rocket Burger.jpg",
-        category:"burgers",
-        heading:"Rocket Burger",
-        price:"$7.20 USD",
-        desc:"A celestial delight featuring a harmonious blend of fresh lettuce, succulent tomatoes, and savory cheese."
-    },
-    {
-        id:2,
-        image:"/image/menuImages/Flash Burger.jpg",
-        category:"burgers",
-        heading:"Flash Burger",
-        price:"$5.20 USD",
-        desc:"Flavor-packed delight with zesty tomatoes, creamy cheese, tangy pickles, and crisp lettuce. Get ready for a taste explosion!"
-    },
-    {
-        id:3,
-        image:"/image/menuImages/Blaze Burger.jpg",
-        category:"burgers",
-        heading:"Blaze Burger",
-        price:"$9.60 USD",
-        desc:"Fiery combination of fresh lettuce, juicy tomatoes, melted cheese, seasoned buns, and a pop of flavor from purple onions."
-    },
-    {
-        id:4,
-        image:"/image/menuImages/sizzl-Burger.jpg",
-        category:"burgers",
-        heading:"Sizzl-Burger",
-        price:"$4.00 USD",
-        desc:"Sizzling sensation of flavor featuring crispy onion rings, savory bacon, melted cheese, and a tangy hint of ketchup."
-    }
-]
 
 let parentMenu = document.querySelector('.menu__food-wrapper');
 const filterButtons = document.querySelectorAll('.menu__button');
@@ -174,7 +140,11 @@ const filterButtons = document.querySelectorAll('.menu__button');
 //initially load items
 
 window.addEventListener('DOMContentLoaded', function(){
-    displayMenuItems(initialDisplay)
+    var result = allfoodItems.filter(item => {
+        for(i = 4; i >= item.id; i++)
+        return item.id; 
+    })
+    displayMenuItems(result)
 })
 
 //buttons filter
@@ -190,10 +160,7 @@ filterButtons.forEach(function(filterButton){
             if(food_item.category === category)
             return food_item;
         })
-        if(category === 'burgers'){
-            displayMenuItems(initialDisplay)
-            
-        }else{
+        if(category === category){
             displayMenuItems(menuButton)
         }
     })
@@ -208,7 +175,7 @@ function displayMenuItems(menuitems){
                 <img src = "${item.image}" width = "150" height = "250" decoding = "async" loading = "lazy">
                 </picture>
                 <h3 class = "menu__food-name">${item.heading}</h3>
-                <span class = "menu__food-price">${item.price}</span>
+                <span class = "menu__food-price">$${item.price}</span>
                 <p class = "menu__food-desc">${item.desc}</p>
                 <div class = "menu__add-to-cart">
                     <div class = "menu__order-quantity">
@@ -225,27 +192,23 @@ function displayMenuItems(menuitems){
     parentMenu.innerHTML = displayMenu;
 }
 
-//Start of shopping cart
+
+//-----------------SHOPPING CART----------------------//
 
 var removeCartItem = document.querySelectorAll('.btn-danger');
 const cartItem = document.querySelector('.navigation__order-item-container');
-
-
-removeCartItem.forEach(function(button){
-    button.addEventListener('click', function(e){
-        let buttonRemove = e.currentTarget;
-        buttonRemove.parentElement.parentElement.remove();
-    })
-    
+const subtotal = document.querySelector('.price');
+window.addEventListener('DOMContentLoaded', function(){
+   renderCartItems();
 })
-        
+
 //cart array
 let cart = [];
 
 function addToCart(id){
     // check if product already exsist in cart
     if(cart.some((item) => item.id === id)){
-        alert("Product already in cart!")
+        changeNumberOfUnits("plus", id);
     }
     else{
         const item = allfoodItems.find((product) => product.id === id)
@@ -261,7 +224,18 @@ function addToCart(id){
 
 function updateCart(){
     renderCartItems();
-    // renderSubtotal();
+    renderSubtotal();
+}
+
+// calculate and render subtotal
+function renderSubtotal(){
+    let totalPrice = 0;
+
+    cart.forEach((item) => {
+        totalPrice += item.price * item.numberOfUnits;
+    })
+
+    subtotal.innerHTML = `$${totalPrice.toFixed(2)}`;
 }
 
 //render cart items
@@ -273,7 +247,7 @@ function renderCartItems(){
             <img class = "navigation__order-image" src = "${item.image}" width = 50 height = 50 decoding="async" aria-hidden="true" alt = "${item.image}">
             <div class = "navigation__order-flex-col-right">
                 <span class = "navigation__order-item-heading">${item.heading}</span>
-                <span class = "navigation__order-item-price">${item.price}</span>
+                <span class = "navigation__order-item-price">$${item.price}</span>
                 <button class = "btn-danger navigation__order-item-remove">Remove</button>
             </div>
             <div class = "navigation__order-quantity">
@@ -292,13 +266,13 @@ function changeNumberOfUnits(action, id){
         let numberOfUnits = item.numberOfUnits;
 
         if(item.id === id){
-            if(action === "minus"){
+            if(action === "minus" && numberOfUnits > 1){
                 numberOfUnits--;
-                if(numberOfUnits <= 0){
-                    numberOfUnits = 0;
-                }
             }else if (action === "plus") {
-                numberOfUnits++;
+                maxUnits = 20;
+                if(numberOfUnits < maxUnits){
+                    numberOfUnits++;
+                }
             }
         }
 

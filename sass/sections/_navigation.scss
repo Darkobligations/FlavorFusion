@@ -48,13 +48,11 @@
     display:flex;
     padding:1.3em;
     align-items: center;
-    position: fixed;
-    z-index: 10;
 }
 
 .Navigation-bar.active{
     background-color: white;
-    transition: .4s all ease-out;
+    transition: .2s all ease-out;
 }
 
 .navigation {

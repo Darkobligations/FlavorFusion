@@ -114,13 +114,11 @@ body {
   display: flex;
   padding: 1.3em;
   align-items: center;
-  position: fixed;
-  z-index: 10;
 }
 
 .Navigation-bar.active {
   background-color: white;
-  transition: 0.4s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 .navigation {
@@ -695,6 +693,7 @@ body {
   background-color: white;
   border-radius: 5px;
   align-items: start;
+  border: 1px rgba(184, 184, 255, 0.4941176471) solid;
 }
 .menu__food-img {
   width: 100%;
