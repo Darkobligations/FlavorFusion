@@ -130,6 +130,8 @@ const allfoodItems = [
         price: 5.25,
         desc:"A delightful treat that combines the luscious sweetness of strawberries with a swirl of indulgence."
     },
+
+    
 ]
 
 
@@ -140,11 +142,8 @@ const filterButtons = document.querySelectorAll('.menu__button');
 //initially load items
 
 window.addEventListener('DOMContentLoaded', function(){
-    var result = allfoodItems.filter(item => {
-        for(i = 4; i >= item.id; i++)
-        return item.id; 
-    })
-    displayMenuItems(result)
+
+    displayMenuItems(allfoodItems)
 })
 
 //buttons filter
@@ -160,7 +159,10 @@ filterButtons.forEach(function(filterButton){
             if(food_item.category === category)
             return food_item;
         })
-        if(category === category){
+        if(category === 'all'){
+            displayMenuItems(allfoodItems)
+            
+        }else{
             displayMenuItems(menuButton)
         }
     })

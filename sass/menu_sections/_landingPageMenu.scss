@@ -1,4 +1,35 @@
 #landing-section-menu{
     padding: var(--section-padding);
-    background-color: var(--secondaryBG-color);
+  
+
+    &::after{
+        position: absolute;
+        display: block;
+        top:0;
+        left:0;
+        width:100%;
+        padding-top:30em;
+        
+        z-index:-1;
+        background-color: var(--secondaryBG-color);
+        content:'';
+    }
+}
+
+.landing-container{
+    text-align: center;
+    position: relative;
+    &__header{
+        line-height: 50px;
+        font-size: var(--header-size);
+
+        span{
+            color:var(--secondaryUtil-color);
+        }
+    }
+
+    &__background-img{
+        top:0;
+        opacity: .10;
+    }
 }
