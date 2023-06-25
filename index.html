@@ -64,7 +64,7 @@
                 <!--NAVIGATION LIST-->
                 <ul class = "navigation__ul">
                     <li><a class = "navigation__links" aria-label = "Go to home page" href = "/">Home</a></li>
-                    <li><a class = "navigation__links" aria-label = "Go to about section" href = "">Order</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to about section" href = "menu.html">Order</a></li>
                     <li><a class = "navigation__links" aria-label = "Go to projects section" href = "">About</a></li>
                     <li><a class = "navigation__links" aria-label = "Go to contact us" href = "mailto:someone@thissite.com">Contact</a></li>
                 </ul>
@@ -96,11 +96,19 @@
                         <span class = "price">$0.00</span>
                     </div>
                     <button>Continue to Checkout</button>
+                    <div class = "popup-warning">
+                        <span>Checkout is disabled</span>
+                    </div>
                 </div>
             </div>
             
             <!--Shopping CART TOGGLE-->
-            <button class = "navigation__order-toggle" aria-label = "order cart toggle" id = "shoppingToggle"><img src = "/image/icons/cart.svg" aria-hidden = "true" alt = "shopping cart" width = "20" height = "20" decoding = "async"></button>
+            <button class = "navigation__order-toggle" aria-label = "order cart toggle" id = "shoppingToggle">
+                <img src = "/image/icons/cart.svg" aria-hidden = "true" alt = "shopping cart" width = "20" height = "20" decoding = "async">
+                <span aria-label = "Total amount of items in the cart" class = "navigation__order-capacity cart_Capacity">
+                    0
+                </span>
+            </button>
                 
             <!--MOBILE MENU TOGGLE-->
             <button class = "navigation__toggle" aria-label = "mobile menu toggle" id = "menuToggle"><span class = "navigation__toggle-span" aria-hidden = "true"></span></button>
@@ -120,7 +128,7 @@
                     <h1 class = "landing__heading">Flavor Fusion: Delightful <span>Delivery</span></h1>
                     <p class = "landing__paragraph">Welcome to Flavor Fusion, your go-to destination for exquisite culinary experiences delivered straight to your doorstep.</p>
                 </div>
-                <a class = "landing__button" aria-label = "Go to order" href = "">
+                <a class = "landing__button" aria-label = "Go to order" href = "menu.html">
                     Place an Order
                 </a>
                 <div class = "landing__review">
@@ -227,11 +235,6 @@
                     <span class = "menu__food-price">$7.20 USD</span>
                     <p class = "menu__food-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!</p>
                     <div class = "menu__add-to-cart">
-                        <div class = "menu__order-quantity">
-                            <img class = "menu__order-increase" src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
-                            <span class = "menu-capacity">0</span>
-                            <img class = "menu__order-decrease" src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
-                        </div>
                         <button class = "menu__cart-button add-to-cart">Add to cart</button>
                     </div>
                 </div>

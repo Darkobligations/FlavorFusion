@@ -273,6 +273,13 @@ body {
   cursor: pointer;
   font-size: var(--body-size);
 }
+.navigation .checkout .popup-warning {
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.171);
+  border-radius: 5px;
+  padding: 0.8em;
+  display: none;
+}
 .navigation .navigation__order.open {
   transform: scale(1);
 }
@@ -283,7 +290,8 @@ body {
   border-radius: 3px;
   background-color: var(--util-color);
   margin-left: auto;
-  margin-right: 0.5em;
+  margin-right: 1em;
+  position: relative;
   cursor: pointer;
 }
 .navigation__order-toggle img {
@@ -291,6 +299,26 @@ body {
   height: 100%;
   max-width: 2em;
   opacity: 0.6;
+}
+.navigation__order-capacity {
+  background-color: white;
+  position: absolute;
+  width: 1.35em;
+  height: 1.35em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-weight: bolder;
+  z-index: 1;
+  transform: translate(7px, -8px);
+  border: 1px rgba(97, 83, 176, 0.1568627451) solid;
+  bottom: 0;
+  right: 0;
+  padding-top: 0.15em;
+  top: 0;
+  color: var(--secondaryUtil-color);
+  font-size: var(--body-size);
 }
 @media screen and (max-width: 64em) {
   .navigation__wrapper {
@@ -740,10 +768,9 @@ body {
   border: none;
   border-radius: 5px;
   padding: 1em;
-  width: 40%;
+  width: 50%;
   font-size: var(--body-size);
   cursor: pointer;
-  margin-left: 1em;
 }
 .menu__button-end {
   padding: 1.3em 4em;
@@ -884,4 +911,9 @@ body {
 }
 .footer__copyright span {
   font-size: 0.8rem;
+}
+
+#landing-section-menu {
+  padding: var(--section-padding);
+  background-color: var(--secondaryBG-color);
 }/*# sourceMappingURL=style.css.map */

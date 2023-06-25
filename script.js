@@ -1,4 +1,4 @@
-//Navigation Toggle Menu
+//------------NAVIGATION TOGGLE MENU-----------//
 let menuOpen = document.querySelector('.navigation__wrapper');
 let navigation__toggle = document.querySelector('.navigation__toggle');
 let navigationBar = document.getElementById('navigation-bar');
@@ -31,7 +31,7 @@ closeToggle.addEventListener('click', function(){
 
 
 
-//Menu Section
+//---------------MENU SECTION----------------//
 
 const allfoodItems = [
     {
@@ -103,7 +103,7 @@ const allfoodItems = [
         image:"/image/menuImages/Coca-Cola.jpg",
         category:"drinks",
         heading:"Coca-Cola",
-        price: 3.10,
+        price: 3.13,
         desc:"Coca-Cola - the iconic, refreshing soft drink with a perfect balance of sweetness and effervescence. Sip and enjoy!"
     },
     {
@@ -178,11 +178,6 @@ function displayMenuItems(menuitems){
                 <span class = "menu__food-price">$${item.price}</span>
                 <p class = "menu__food-desc">${item.desc}</p>
                 <div class = "menu__add-to-cart">
-                    <div class = "menu__order-quantity">
-                        <img class = "menu__order-increase" src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
-                        <span class = "menu-capacity">0</span>
-                        <img class = "menu__order-decrease" src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
-                    </div>
                     <button onclick = "addToCart(${item.id})" class = "menu__cart-button">Add to cart</button>
                 </div>
             </div>
@@ -198,12 +193,16 @@ function displayMenuItems(menuitems){
 var removeCartItem = document.querySelectorAll('.btn-danger');
 const cartItem = document.querySelector('.navigation__order-item-container');
 const subtotal = document.querySelector('.price');
+const cart_total_items = document.querySelector('.cart_Capacity');
+
+
 window.addEventListener('DOMContentLoaded', function(){
    renderCartItems();
 })
 
 //cart array
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+updateCart();
 
 function addToCart(id){
     // check if product already exsist in cart
@@ -221,21 +220,26 @@ function addToCart(id){
     updateCart();
     
 }
-
+//update cart
 function updateCart(){
     renderCartItems();
     renderSubtotal();
+
+    //save cart to local storage
+    localStorage.setItem("CART", JSON.stringify(cart));
 }
 
 // calculate and render subtotal
 function renderSubtotal(){
-    let totalPrice = 0;
+    let totalPrice = 0, totalItems = 0;
 
     cart.forEach((item) => {
         totalPrice += item.price * item.numberOfUnits;
-    })
+        totalItems += item.numberOfUnits;
+    });
 
     subtotal.innerHTML = `$${totalPrice.toFixed(2)}`;
+    cart_total_items.innerHTML = totalItems;
 }
 
 //render cart items
@@ -248,7 +252,7 @@ function renderCartItems(){
             <div class = "navigation__order-flex-col-right">
                 <span class = "navigation__order-item-heading">${item.heading}</span>
                 <span class = "navigation__order-item-price">$${item.price}</span>
-                <button class = "btn-danger navigation__order-item-remove">Remove</button>
+                <button onclick = "removeItemFromCart(${item.id})" class = "navigation__order-item-remove">Remove</button>
             </div>
             <div class = "navigation__order-quantity">
                 <img onclick = "changeNumberOfUnits('plus', ${item.id})" class = "menu__order-increase" src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
@@ -258,6 +262,13 @@ function renderCartItems(){
         </div>  
         `;
     });
+}
+
+//remove item from cart
+function removeItemFromCart(id){
+    cart = cart.filter( (item) => item.id !== id)
+
+    updateCart();
 }
 
 //change number of units for an item
