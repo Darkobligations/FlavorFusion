@@ -1,7 +1,6 @@
 #landing-section-menu{
     padding: var(--section-padding);
-  
-
+    
     &::after{
         position: absolute;
         display: block;
@@ -9,7 +8,6 @@
         left:0;
         width:100%;
         padding-top:30em;
-        
         z-index:-1;
         background-color: var(--secondaryBG-color);
         content:'';
