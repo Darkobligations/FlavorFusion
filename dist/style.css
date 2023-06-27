@@ -927,6 +927,9 @@ body {
   background-color: var(--secondaryBG-color);
   content: "";
 }
+#landing-section-menu .landing-container {
+  padding: 0;
+}
 
 .landing-container {
   text-align: center;
@@ -948,4 +951,32 @@ body {
   padding: var(--section-padding);
   letter-spacing: 1px;
   background-color: white;
+}
+
+#landing-section-about {
+  padding: var(--section-padding);
+  background-color: var(--secondaryBG-color);
+}
+#landing-section-about .landing-container {
+  padding: 0;
+}
+
+.Navigation-bar {
+  background-color: var(--secondaryBG-color);
+}
+
+.landing-container {
+  text-align: center;
+  position: relative;
+}
+.landing-container__header {
+  line-height: 50px;
+  font-size: var(--header-size);
+}
+.landing-container__header span {
+  color: var(--secondaryUtil-color);
+}
+.landing-container__background-img {
+  top: 0;
+  opacity: 0.1;
 }/*# sourceMappingURL=style.css.map */
