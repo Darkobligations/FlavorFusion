@@ -1,3 +1,5 @@
+@use '../globals' as u;
+
 #landing-section{
     letter-spacing: 1px;  
     padding:var( --section-padding);
@@ -39,6 +41,10 @@
         flex-direction: column;
         gap:1em;
         justify-content: center;
+
+        @include u.breakpoint(medium) {
+            max-width: 32em;
+        }
     }
     
     &__heading{
@@ -93,8 +99,11 @@
     &__image-container{
         position: relative;
         margin-top:4em;
-        max-width: 15em;
-        
+        width:70%;
+        height:100%;
+        @include u.breakpoint(medium) {
+            max-width: 19.9375em;
+        }
     }
 
     &__image-utility{

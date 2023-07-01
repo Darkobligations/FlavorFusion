@@ -1,3 +1,6 @@
+@use '../globals' as u;
+
+
 #about-section{
     letter-spacing: 1px;  
     padding:var( --section-padding);
@@ -20,6 +23,12 @@
         gap:1.2em;
        align-items: start;
        position: relative;
+
+       @include u.breakpoint(medium){
+        align-items: center;
+        text-align: center;
+        max-width: 40em;
+      }
     }
     
     &__heading{
@@ -44,7 +53,12 @@
         z-index: 1;
         position: relative;
         
-        &:before{
+        @include u.breakpoint(medium){
+            width:80%;
+            max-width: 30em;
+        }
+        
+          &:before{
             content: '';
             display: block;
             height: 100%;

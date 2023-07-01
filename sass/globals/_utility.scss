@@ -1,3 +1,4 @@
+@use '../globals/breakpoints' as u;
 
 :root{
     //color scheme
@@ -7,9 +8,11 @@
     --util-color:#b8b8ff;
     --secondaryUtil-color:#6153B0;
 
+   
+
     //font size
     --header-size:clamp(2.6rem, 5vw, 3.9rem);
-    --headerTwo-size:clamp(2.5rem, 5vw, 2.6rem);
+    --headerTwo-size:clamp(2.5rem, 8vw, 3rem);
     --headerThree-size:clamp(1.4rem, 2vw, 1.7rem);
     --body-size:1rem;
     --footer-size:clamp(0.95rem, 1.5vw, 0.938rem);

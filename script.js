@@ -171,7 +171,6 @@ filterButtons.forEach(function(filterButton){
 function displayMenuItems(menuitems){
     let displayMenu = menuitems.map(function(item){
         return `
-        <div class = "menu__food-wrapper">
             <div class = "menu__food-card">
                 <picture class = "menu__food-img">
                 <img src = "${item.image}" width = "150" height = "250" decoding = "async" loading = "lazy">
@@ -183,7 +182,7 @@ function displayMenuItems(menuitems){
                     <button onclick = "addToCart(${item.id})" class = "menu__cart-button">Add to cart</button>
                 </div>
             </div>
-        </div> `
+         `
     })
     displayMenu = displayMenu.join("");
     parentMenu.innerHTML = displayMenu;

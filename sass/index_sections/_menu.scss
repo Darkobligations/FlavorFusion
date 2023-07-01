@@ -1,3 +1,5 @@
+@use '../globals' as u;
+
 #menu-section{
     padding:var(--section-padding);
     letter-spacing: 1px;  
@@ -9,16 +11,26 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap:0;
+    gap:3em;
     padding-right:0;
     padding-left:0;
     align-items: center;
+
+    @include u.breakpoint(medium) {
+       gap:4em;
+    }
+
     &__info{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap:1em;
+
+        @include u.breakpoint(medium) {
+            max-width: 35em;
+            gap:1.5em;
+        }
     }
 
     &__heading{
@@ -38,8 +50,12 @@
         justify-content: center;
         flex-direction: column;
         gap:1em;
-        margin-top:2em;
         width:100%;
+
+        @include u.breakpoint(medium) {
+            width:90%;
+        }
+
     }
 
     &__button{
@@ -66,7 +82,11 @@
         justify-content: center;
         align-items: center;
         gap:1em;
-        margin-top:2em;
+        margin-top:1em;
+
+        @include u.breakpoint(medium) {
+           gap:4em;
+        }
     }
 
     &__food-card{
@@ -78,6 +98,10 @@
         border-radius: 5px;
         align-items: start;
         border:1px #b8b8ff7e solid;
+
+        @include u.breakpoint(medium) {
+            max-width: 23em;
+        }
     }
 
     &__food-img{

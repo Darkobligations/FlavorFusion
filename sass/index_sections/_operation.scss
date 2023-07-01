@@ -1,3 +1,5 @@
+@use '../globals' as u;
+
 #operation-section{
     padding:var(--section-padding);
     letter-spacing: .5px;
@@ -26,9 +28,13 @@
     }
 
     &__image{
-        clip-path: circle(45% at 50% 50%);
-        width:16em;
-        height:16em;
+        clip-path: circle(35% at 50% 50%);        
+        width:100%;
+        height:20em;
+
+        @include u.breakpoint(medium) {
+            max-width: 27.75em;
+        }
         
         img{
             width:100%;
@@ -45,6 +51,10 @@
         align-items: center;
         gap:1em;
         text-align: center;
+
+        @include u.breakpoint(medium) {
+            max-width: 30em;
+        }
     }
 
     &__context-heading{
