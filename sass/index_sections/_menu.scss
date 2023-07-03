@@ -67,9 +67,6 @@
         font-size:var(--body-size);
         cursor: pointer;
         border:1px rgba(0, 0, 0, 0.103) solid;
-        &:hover{
-            background-color: var(--util-color);
-        }
     }
 
     &__button-active{
@@ -101,6 +98,10 @@
 
         @include u.breakpoint(medium) {
             max-width: 23em;
+        }
+
+        @include u.breakpoint(large) {
+            max-width: 21em;
         }
     }
 

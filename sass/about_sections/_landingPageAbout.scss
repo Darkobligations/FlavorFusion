@@ -1,8 +1,9 @@
+@use '../globals' as u;
+
 #landing-section-about{
     padding: var(--section-padding);
     background-color: var(--secondaryBG-color);
     
-
     .landing-container{
         padding: 0;
     }
@@ -19,6 +20,14 @@
     &__header{
         line-height: 50px;
         font-size: var(--header-size);
+        font-weight: bolder;
+        @include u.breakpoint(medium){
+            max-width: 13em;
+        }
+
+        @include u.breakpoint(large) {
+            line-height: 65px;
+        }
 
         span{
             color:var(--secondaryUtil-color);

@@ -44,7 +44,7 @@ body {
   --body-color:#000000;
   --util-color:#b8b8ff;
   --secondaryUtil-color:#6153B0;
-  --header-size:clamp(2.6rem, 5vw, 3.9rem);
+  --header-size:clamp(2.6rem, 5.2vw, 3.9rem);
   --headerTwo-size:clamp(2.5rem, 8vw, 3rem);
   --headerThree-size:clamp(1.4rem, 2vw, 1.7rem);
   --body-size:1rem;
@@ -114,6 +114,11 @@ body {
   display: flex;
   padding: 1.3em;
   align-items: center;
+}
+@media (min-width: 48.75em) {
+  #navigation-bar {
+    padding: 1.5em;
+  }
 }
 
 .Navigation-bar.active {
@@ -748,9 +753,6 @@ body {
   cursor: pointer;
   border: 1px rgba(0, 0, 0, 0.103) solid;
 }
-.menu__button:hover {
-  background-color: var(--util-color);
-}
 .menu__button-active {
   background-color: var(--util-color);
 }
@@ -780,6 +782,11 @@ body {
 @media (min-width: 30em) {
   .menu__food-card {
     max-width: 23em;
+  }
+}
+@media (min-width: 48.75em) {
+  .menu__food-card {
+    max-width: 21em;
   }
 }
 .menu__food-img {
@@ -853,6 +860,12 @@ body {
   gap: 3em;
   position: relative;
 }
+@media (min-width: 30em) {
+  .contact {
+    align-items: center;
+    gap: 5em;
+  }
+}
 .contact__wrapper {
   display: flex;
   flex-direction: column;
@@ -860,6 +873,13 @@ body {
   justify-content: center;
   gap: 1em;
   position: relative;
+}
+@media (min-width: 30em) {
+  .contact__wrapper {
+    text-align: center;
+    align-items: center;
+    max-width: 45em;
+  }
 }
 .contact__heading {
   font-size: var(--headerTwo-size);
@@ -870,9 +890,15 @@ body {
   border-radius: 1em;
   overflow: hidden;
   z-index: -1;
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: block;
+}
+@media (min-width: 30em) {
+  .contact__img {
+    width: 60%;
+    max-width: 25em;
+  }
 }
 .contact__img::before {
   z-index: 1;
@@ -1031,6 +1057,17 @@ body {
 .landing-container__header {
   line-height: 50px;
   font-size: var(--header-size);
+  font-weight: bolder;
+}
+@media (min-width: 30em) {
+  .landing-container__header {
+    max-width: 13em;
+  }
+}
+@media (min-width: 48.75em) {
+  .landing-container__header {
+    line-height: 65px;
+  }
 }
 .landing-container__header span {
   color: var(--secondaryUtil-color);

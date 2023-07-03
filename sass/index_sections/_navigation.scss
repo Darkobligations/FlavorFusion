@@ -1,3 +1,4 @@
+@use '../globals' as u;
 .banner{
     position: absolute;
     justify-content: center;
@@ -48,6 +49,10 @@
     display:flex;
     padding:1.3em;
     align-items: center;
+
+    @include u.breakpoint(large) {
+        padding:1.5em;    
+    }
 }
 
 .Navigation-bar.active{
