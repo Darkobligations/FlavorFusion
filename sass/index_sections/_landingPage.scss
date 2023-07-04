@@ -41,16 +41,15 @@
         flex-direction: column;
         gap:1em;
         justify-content: center;
-
-        @include u.breakpoint(medium) {
-            max-width: 32em;
-        }
+        align-items: center;
     }
     
     &__heading{
         font-size:var( --header-size);
         text-align: center;
-
+        @include u.breakpoint(medium) {
+            max-width: 10em;
+        }
         span{
             color:var(--secondaryUtil-color)
         }
@@ -59,6 +58,9 @@
     &__paragraph{
         font-size:var( --sub-head);
         text-align: center;
+        @include u.breakpoint(medium) {
+            max-width: 34em;
+        }
     }
 
     .landing__button{

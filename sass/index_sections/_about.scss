@@ -5,6 +5,7 @@
     letter-spacing: 1px;  
     padding:var( --section-padding);
     background-color: var(--secondaryBG-color);
+    
 }
 
 .about{
@@ -15,7 +16,8 @@
     padding-left:0;
     padding-right:0;
     align-items: center;
-
+    position: relative;
+    z-index: 10;
     &__info{
         display: flex;
         align-items: center;
@@ -23,7 +25,7 @@
         gap:1.2em;
        align-items: start;
        position: relative;
-
+        z-index: 10;
        @include u.breakpoint(medium){
         align-items: center;
         text-align: center;
@@ -50,7 +52,7 @@
         height:100%;
         display: block;
         margin-top:4em;
-        z-index: 1;
+        z-index: -1;
         position: relative;
         
         @include u.breakpoint(medium){
@@ -63,7 +65,7 @@
             display: block;
             height: 100%;
             width: 100%;
-            background: var(--secondaryUtil-color);
+            background-color: black;
             opacity: .20;
             z-index: 2;
             position:absolute;
@@ -87,8 +89,13 @@
     display: block;
     opacity: .03;
     position: absolute;
-    top:3em;
+    top:2em;
     width:100%;
     height:100%;
     max-width: 35em;
+    
+    background-image: url("/image/Utility/background-text.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
 }

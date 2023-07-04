@@ -18,7 +18,7 @@ menuToggle.addEventListener('click', function(){
 
 //Order Toggle Menu
 let shoppingToggle = document.getElementById('shoppingToggle');
-let order_menu = document.querySelector('.navigation__order');
+let order_menu = document.querySelector('.navigation__order-wrapper');
 let closeToggle = document.getElementById('closeToggle');
 
 shoppingToggle.addEventListener('click', function(){

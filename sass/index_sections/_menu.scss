@@ -28,19 +28,23 @@
         gap:1em;
 
         @include u.breakpoint(medium) {
-            max-width: 35em;
             gap:1.5em;
         }
     }
 
     &__heading{
         font-size: var(--headerTwo-size);
+        
     }
 
     &__paragraph{
         span{
             color:var(--secondaryUtil-color);
             border-bottom: 1px solid var(--secondaryUtil-color);
+        }
+
+        @include u.breakpoint(large) {
+            max-width: 35em;
         }
     }
     
