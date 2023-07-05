@@ -52,7 +52,7 @@ body {
   --font-weight:400;
   --font-weight:700;
   --navbar-height:94.93px;
-  --section-padding:clamp(3.75em, 7.82vw, 6.25em) 1rem;
+  --section-padding:clamp(2.75em, 7.82vw, 5.25em) 1rem;
   --container-padding:clamp(2em, 7.82vw, 6.25em) 0rem;
 }
 
@@ -77,9 +77,14 @@ body {
   align-items: center;
   width: 100%;
   background-color: var(--util-color);
-  padding: 1em;
+  padding: 0.7em;
   text-align: center;
   z-index: 1;
+}
+@media (min-width: 64em) {
+  .banner {
+    display: block;
+  }
 }
 .banner__image-wrapper {
   background-image: url("/image/Utility/bannerBackground.svg");
@@ -93,11 +98,6 @@ body {
   background-size: cover;
   opacity: 0.09;
   z-index: -1;
-}
-@media (min-width: 64em) {
-  .banner {
-    display: block;
-  }
 }
 .banner__text {
   font-size: 0.9375rem;
@@ -190,7 +190,7 @@ body {
 }
 @media (min-width: 64em) {
   .navigation__order {
-    max-width: 31.25em;
+    max-width: 26.25em;
     left: auto;
     transform-origin: right;
   }
@@ -462,8 +462,7 @@ body {
 #landing-section {
   letter-spacing: 1px;
   padding: var(--section-padding);
-  padding-top: 0;
-  padding-bottom: 0;
+  min-height: 100vh;
 }
 #landing-section::after {
   position: absolute;
@@ -477,15 +476,24 @@ body {
   background-color: var(--secondaryBG-color);
   content: "";
 }
+@media (min-width: 64em) {
+  #landing-section::after {
+    clip-path: none;
+    height: auto;
+  }
+}
 
 .landing-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: var(--section-padding);
-  padding-left: 0;
-  padding-right: 0;
+}
+@media (min-width: 64em) {
+  .landing-container {
+    flex-direction: row;
+    gap: 4em;
+  }
 }
 
 .landing {
@@ -495,33 +503,34 @@ body {
   flex-direction: column;
   gap: 2em;
 }
+@media (min-width: 64em) {
+  .landing {
+    align-items: start;
+    gap: 1em;
+    max-width: 37em;
+  }
+}
 .landing__textContainer {
   display: flex;
   flex-direction: column;
-  gap: 1em;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  gap: 0.5em;
+}
+@media (min-width: 64em) {
+  .landing__textContainer {
+    text-align: start;
+  }
 }
 .landing__heading {
   font-size: var(--header-size);
-  text-align: center;
-}
-@media (min-width: 30em) {
-  .landing__heading {
-    max-width: 10em;
-  }
 }
 .landing__heading span {
   color: var(--secondaryUtil-color);
 }
 .landing__paragraph {
   font-size: var(--sub-head);
-  text-align: center;
-}
-@media (min-width: 30em) {
-  .landing__paragraph {
-    max-width: 34em;
-  }
 }
 .landing .landing__button {
   padding: 1.3em 1em;
@@ -530,12 +539,25 @@ body {
   color: var(--body-color);
   z-index: 1;
 }
+@media (min-width: 64em) {
+  .landing .landing__button {
+    margin-top: 1.5em;
+  }
+}
 .landing__review {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
   margin-top: 3em;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .landing__review {
+    align-items: start;
+    text-align: start;
+    margin-top: 2em;
+  }
 }
 .landing__review img {
   width: 100%;
@@ -544,7 +566,6 @@ body {
   max-width: 6em;
 }
 .landing__review .review-span {
-  text-align: center;
   line-height: 23px;
   font-size: 0.95rem;
   max-width: 15em;
@@ -563,6 +584,13 @@ body {
     max-width: 19.9375em;
   }
 }
+@media (min-width: 64em) {
+  .landing__image-container {
+    max-width: 25em;
+    height: 32em;
+    margin-top: 0;
+  }
+}
 .landing__image-utility {
   clip-path: circle(45% at 50% 50%);
   width: 7em;
@@ -576,14 +604,21 @@ body {
 }
 .landing__img {
   display: block;
-  border-radius: 3em;
+  border-radius: 0.7em;
   clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   width: 100%;
   height: 100%;
   transform: rotate(90deg);
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
   position: relative;
+}
+@media (min-width: 64em) {
+  .landing__img {
+    clip-path: none;
+    transform: rotate(0);
+    border-top-left-radius: 5.5em;
+  }
 }
 .landing__img:before {
   content: "";
@@ -592,7 +627,7 @@ body {
   width: 100%;
   background: black;
   opacity: 0.4;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
 }
 .landing__img img {
@@ -600,6 +635,11 @@ body {
   height: 100%;
   object-fit: contain;
   display: block;
+}
+@media (min-width: 64em) {
+  .landing__img img {
+    object-fit: cover;
+  }
 }
 
 #about-section {

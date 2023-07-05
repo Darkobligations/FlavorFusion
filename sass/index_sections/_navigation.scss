@@ -7,9 +7,14 @@
   align-items: center;
   width: 100%;
   background-color: var(--util-color);
-  padding: 1em;
+  padding: .70em;
   text-align: center;
   z-index: 1;
+
+  @include u.breakpoint(x-large) {
+    display: block;
+  }
+
   &__image-wrapper {
     background-image: url("/image/Utility/bannerBackground.svg");
     top: 0;
@@ -24,9 +29,7 @@
     z-index: -1;
   }
 
-  @include u.breakpoint(x-large) {
-    display: block;
-  }
+  
 
   &__text {
     font-size: 0.9375rem;
@@ -114,12 +117,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    
     transform-origin: right;
     transition: 0.25s;
 
     @include u.breakpoint(x-large) {
-        max-width: 31.25em;
+        max-width: 26.25em;
         left:auto;
         transform-origin: right;
     }
