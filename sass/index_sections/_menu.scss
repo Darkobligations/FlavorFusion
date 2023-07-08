@@ -60,6 +60,13 @@
             width:90%;
         }
 
+        @include u.breakpoint(x-large) {
+            width:100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width:35em;
+        }
+
     }
 
     &__button{
@@ -71,6 +78,11 @@
         font-size:var(--body-size);
         cursor: pointer;
         border:1px rgba(0, 0, 0, 0.103) solid;
+
+        @include u.breakpoint(x-large) {
+            width:100%;
+            padding:1em;
+        }
     }
 
     &__button-active{
@@ -88,6 +100,11 @@
         @include u.breakpoint(medium) {
            gap:4em;
         }
+
+        @include u.breakpoint(x-large) {
+            max-width: 100em;
+            
+        }
     }
 
     &__food-card{
@@ -99,13 +116,22 @@
         border-radius: 5px;
         align-items: start;
         border:1px #b8b8ff7e solid;
-
+        
         @include u.breakpoint(medium) {
             max-width: 23em;
         }
 
         @include u.breakpoint(large) {
             max-width: 21em;
+        }
+
+        @include u.breakpoint(x-large) {
+            flex-direction: row;
+            width:35em;
+            align-items: center;
+            gap:2em;
+            height:15em;
+            max-width: 100%;
         }
     }
 
@@ -119,6 +145,35 @@
             height:100%;
             object-fit: cover;
         }
+
+        @include u.breakpoint(x-large) {
+            height:10em;
+            max-width:10em;
+            border-radius: 10px;
+        }
+    }
+
+    &__food-row-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        
+        @include u.breakpoint(x-large) {
+            gap:.30em;
+        }
+    }
+    
+    &__name-price-row{
+        display: flex;
+        flex-direction: column;
+        gap:.50em;
+
+        @include u.breakpoint(x-large) {
+            flex-direction: row;
+            width:100%;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
 
@@ -126,6 +181,9 @@
         font-size:var(--headerThree-size);
         letter-spacing: 0.5px;
         margin-top:.50em;
+        @include u.breakpoint(x-large) {
+            margin-top:0;
+        }
     }
 
     &__food-price{
@@ -137,6 +195,9 @@
         gap:.40em;
         width:100%;
         margin-top:1em;
+        @include u.breakpoint(x-large) {
+            margin-top:0.50em;
+        }
     }
 
     &__capacity{
@@ -166,6 +227,9 @@
         font-size:var(--body-size);
         cursor: pointer;
         
+        @include u.breakpoint(x-large) {
+            padding:.75em 0;
+        }
     }
 
     &__button-end{

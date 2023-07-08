@@ -12,12 +12,18 @@
     display: flex;
     flex-direction: column;
     gap:2em;
-    padding:var(--section-padding);
+    padding:var(--container-padding);
     padding-left:0;
     padding-right:0;
     align-items: center;
     position: relative;
     z-index: 10;
+    justify-content: center;
+    @include u.breakpoint(x-large) {
+        flex-direction: row;
+        gap:5em;
+    }
+
     &__info{
         display: flex;
         align-items: center;
@@ -31,6 +37,10 @@
         text-align: center;
         max-width: 40em;
       }
+      @include u.breakpoint(x-large) {
+        text-align: start;
+        align-items: start;
+     }
     }
     
     &__heading{

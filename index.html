@@ -175,33 +175,35 @@
     <section id = "operation-section">
         <div class = "operation">
             <h2 class = "operation__heading">How it Works.</h2>
-            <div class = "operation__content">
-                <picture class = "operation__image" aria-hidden = "true">
-                    <img src = "/image/sectionImages/operation-img.jpg" aria-hidden = "true" loading = "lazy" width = "200" height = "200" decoding="async">
-                </picture>
-                <div class = "operation__context">
-                    <h3 class = "operation__context-heading">Adapt your menu items</h3>
-                    <p class = "operation__context-paragraph">Our intuitive online platform allows you to effortlessly customize your order by selecting your favorite items from our diverse menu.</p>
+            <div class = "operation__content-wrapper">
+                <div class = "operation__content">
+                    <picture class = "operation__image" aria-hidden = "true">
+                        <img src = "/image/sectionImages/operation-img.jpg" aria-hidden = "true" loading = "lazy" width = "200" height = "200" decoding="async">
+                    </picture>
+                    <div class = "operation__context">
+                        <h3 class = "operation__context-heading">Adapt your menu items</h3>
+                        <p class = "operation__context-paragraph">Our intuitive online platform allows you to effortlessly customize your order by selecting your favorite items from our diverse menu.</p>
+                    </div>
+                    <span class = "operation__dotted-line" aria-hidden = "true"></span>
                 </div>
-                <span class = "operation__dotted-line" aria-hidden = "true"></span>
-            </div>
-            <div class = "operation__content">
-                <picture class = "operation__image" aria-hidden = "true">
-                    <img src = "/image/sectionImages/operation-imgTwo.jpg" aria-hidden = "true" loading = "lazy" width = "200" height = "200" decoding="async">
-                </picture>
-                <div class = "operation__context">
-                    <h3 class = "operation__context-heading">Accept online orders & takeout</h3>
-                    <p class = "operation__context-paragraph">With just a few simple clicks, you can easily place your order online, eliminating the need to wait in line or make a phone call.</p>
+                <div class = "operation__content">
+                    <picture class = "operation__image" aria-hidden = "true">
+                        <img src = "/image/sectionImages/operation-imgTwo.jpg" aria-hidden = "true" loading = "lazy" width = "200" height = "200" decoding="async">
+                    </picture>
+                    <div class = "operation__context">
+                        <h3 class = "operation__context-heading">Accept online orders & takeout</h3>
+                        <p class = "operation__context-paragraph">With just a few simple clicks, you can easily place your order online, eliminating the need to wait in line or make a phone call.</p>
+                    </div>
+                    <span class = "operation__dotted-line" aria-hidden = "true"></span>
                 </div>
-                <span class = "operation__dotted-line" aria-hidden = "true"></span>
-            </div>
-            <div class = "operation__content">
-                <picture class = "operation__image" aria-hidden = "true">
-                    <img src = "/image/sectionImages/operation-imgThree.jpg" aria-hidden = "true" loading = "lazy" width = "200" height = "200" decoding="async" alt = "">
-                </picture>
-                <div class = "operation__context">
-                    <h3 class = "operation__context-heading">Manage delivery or takeout</h3>
-                    <p class = "operation__context-paragraph">Choose between the convenience of delivery or the flexibility of takeout, ensuring that you can enjoy your meal wherever and however you prefer.</p>
+                <div class = "operation__content">
+                    <picture class = "operation__image" aria-hidden = "true">
+                        <img src = "/image/sectionImages/operation-imgThree.jpg" aria-hidden = "true" loading = "lazy" width = "200" height = "200" decoding="async" alt = "">
+                    </picture>
+                    <div class = "operation__context">
+                        <h3 class = "operation__context-heading">Manage delivery or takeout</h3>
+                        <p class = "operation__context-paragraph">Choose between the convenience of delivery or the flexibility of takeout, ensuring that you can enjoy your meal wherever and however you prefer.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -230,11 +232,15 @@
                     <picture class = "menu__food-img">
                         <img src = "/image/menuImages/Rocket Burger.jpg" width = "150" height = "250" decoding = "async" loading = "lazy">
                     </picture>
-                    <h3 class = "menu__food-name">Rocket Burger</h3>
-                    <span class = "menu__food-price">$7.20 USD</span>
-                    <p class = "menu__food-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!</p>
-                    <div class = "menu__add-to-cart">
-                        <button class = "menu__cart-button add-to-cart">Add to cart</button>
+                    <div class = "menu__food-row-wrapper">
+                        <div class = "menu__name-price-row">
+                            <h3 class = "menu__food-name">Rocket Burger</h3>
+                            <span class = "menu__food-price">$7.20 USD</span>
+                        </div>
+                        <p class = "menu__food-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quasi!</p>
+                        <div class = "menu__add-to-cart">
+                            <button class = "menu__cart-button add-to-cart">Add to cart</button>
+                        </div>
                     </div>
                 </div>
             </div>

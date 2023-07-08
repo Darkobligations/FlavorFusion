@@ -14,10 +14,25 @@
     gap:2em;
     padding:var(--container-padding);
     position: relative;
+
+    @include u.breakpoint(x-large) {
+        gap:0;
+    }
+
     &__heading{
         font-size:var(--headerTwo-size);
         margin-bottom:1em;
         color:var(--secondaryUtil-color);
+    }
+    
+    &__content-wrapper{
+        display: flex;
+        gap:3em;
+        flex-direction: column;
+        justify-content: center;
+        @include u.breakpoint(x-large) {
+            flex-direction: row;
+        }
     }
 
     &__content{
@@ -25,6 +40,10 @@
         gap:2em;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        @include u.breakpoint(x-large) {
+            gap:0;
+        }
     }
 
     &__image{
@@ -35,13 +54,16 @@
         @include u.breakpoint(medium) {
             max-width: 27.75em;
         }
+
+        @include u.breakpoint(x-large) {
+            max-width: 15.75em;
+        }
         
         img{
             width:100%;
             height:100%;
             object-fit: cover;
             object-position: 50%;
-           
         }
     }
     
@@ -54,6 +76,10 @@
 
         @include u.breakpoint(medium) {
             max-width: 30em;
+        }
+
+        @include u.breakpoint(x-large) {
+            max-width:26em;
         }
     }
 
@@ -68,5 +94,10 @@
         border-left: dashed rgba(0, 0, 0, 0.315) 1px;
         background-color:transparent;
         margin-top:.50em;
+
+        @include u.breakpoint(x-large) {
+            
+            border:none;
+        }
     }
 }

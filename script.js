@@ -175,11 +175,15 @@ function displayMenuItems(menuitems){
                 <picture class = "menu__food-img">
                 <img src = "${item.image}" width = "150" height = "250" decoding = "async" loading = "lazy">
                 </picture>
-                <h3 class = "menu__food-name">${item.heading}</h3>
-                <span class = "menu__food-price">$${item.price}</span>
-                <p class = "menu__food-desc">${item.desc}</p>
-                <div class = "menu__add-to-cart">
-                    <button onclick = "addToCart(${item.id})" class = "menu__cart-button">Add to cart</button>
+                <div class = "menu__food-row-wrapper">
+                    <div class = "menu__name-price-row">
+                        <h3 class = "menu__food-name">${item.heading}</h3>
+                        <span class = "menu__food-price">$${item.price}</span>
+                    </div>
+                    <p class = "menu__food-desc">${item.desc}</p>
+                    <div class = "menu__add-to-cart">
+                        <button onclick = "addToCart(${item.id})" class = "menu__cart-button">Add to cart</button>
+                    </div>
                 </div>
             </div>
          `
