@@ -40,17 +40,6 @@
     
 </head>
 <body>
-    
-    <!------------------------------------------------>
-    <!----                 TOPPER                 ---->
-    <!------------------------------------------------>
-    
-    <div class = "banner">
-        <picture class = "banner__image-wrapper" aria-hidden = "true">
-            <img class = "banner__image" width = "150" height = "200" decoding="async" src = "image/Utility/bannerBackground.svg">
-        </picture>
-        <span class = "banner__text">We offer takeaway and delivery services for your convenience.<a class = "banner__order" href = "" aria-label = "Click here to order now."> Order Now!</a></span>
-    </div>
 
     <!------------------------------------------------>
     <!----               NAVIGATION               ---->
@@ -59,7 +48,7 @@
     <header id = "navigation-bar" class = "Navigation-bar">
         <div class = "navigation">
             <!--LOGO-->
-            <a class = "navigation__logo" aria-label="Go back to home page" href = "index.html"><img width = "50" aria-hidden = "true" decoding = "async" height = "50" alt = "logo" src = "/image/logo.png"></a>
+            <a class = "navigation__logo" aria-label="Go back to home page" href = "/"><img width = "50" aria-hidden = "true" decoding = "async" height = "50" alt = "logo" src = "/image/logo.png"></a>
             <nav class = "navigation__wrapper">
                 <!--NAVIGATION LIST-->
                 <ul class = "navigation__ul">
@@ -70,38 +59,39 @@
                 </ul>
             </nav>
             <!--ORDER MENU-->
-            <div class = "navigation__order">
-                <div class = "navigation__order-flexRow">
-                    <span class = "order-heading">Your Order</span>
-                    <button aria-label = "close the order menu" id = "closeToggle" class = "closeToggle"><span class = "close-span" aria-hidden = "true"></span></button>
-                </div>
-                <div class = "navigation__order-item-container">
-                    <div class = "navigation__order-item">
-                        <img class = "navigation__order-image" src = "/image/menuImages/Rocket Burger.jpg" width = 50 height = 50 decoding="async" aria-hidden="true">
-                        <div class = "navigation__order-flex-col-right">
-                            <span class = "navigation__order-item-heading">Rocket Burger</span>
-                            <span class = "navigation__order-item-price">$7.20 USD</span>
-                            <button class = "btn-danger navigation__order-item-remove">Remove</button>
-                        </div>
-                        <div class = "navigation__order-quantity">
-                            <img src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
-                            <span class = "order-capacity">0</span>
-                            <img src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
-                        </div>
-                    </div>  
-                </div>
-                <div class = "checkout">
-                    <div class = "subtotal">
-                        <span> Subtotal</span>
-                        <span class = "price">$0.00</span>
+            <div class = "navigation__order-wrapper" aria-hidden="true">
+                <div class = "navigation__order">
+                    <div class = "navigation__order-flexRow">
+                        <span class = "order-heading">Your Order</span>
+                        <button aria-label = "close the order menu" id = "closeToggle" class = "closeToggle"><span class = "close-span" aria-hidden = "true"></span></button>
                     </div>
-                    <button>Continue to Checkout</button>
-                    <div class = "popup-warning">
-                        <span>Checkout is disabled</span>
+                    <div class = "navigation__order-item-container">
+                        <div class = "navigation__order-item">
+                            <img class = "navigation__order-image" src = "/image/menuImages/Rocket Burger.jpg" width = 50 height = 50 decoding="async" aria-hidden="true">
+                            <div class = "navigation__order-flex-col-right">
+                                <span class = "navigation__order-item-heading">Rocket Burger</span>
+                                <span class = "navigation__order-item-price">$7.20 USD</span>
+                                <button class = "btn-danger navigation__order-item-remove">Remove</button>
+                            </div>
+                            <div class = "navigation__order-quantity">
+                                <img src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                                <span class = "order-capacity">0</span>
+                                <img src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                            </div>
+                        </div>  
+                    </div>
+                    <div class = "checkout">
+                        <div class = "subtotal">
+                            <span> Subtotal</span>
+                            <span class = "price">$0.00</span>
+                        </div>
+                        <button>Continue to Checkout</button>
+                        <div class = "popup-warning">
+                            <span>Checkout is disabled</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            
             <!--Shopping CART TOGGLE-->
             <button class = "navigation__order-toggle" aria-label = "order cart toggle" id = "shoppingToggle">
                 <img src = "/image/icons/cart.svg" aria-hidden = "true" alt = "shopping cart" width = "20" height = "20" decoding = "async">

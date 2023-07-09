@@ -17,8 +17,9 @@
         content:'';
 
         @include u.breakpoint(x-large) {
-           clip-path: none;
-           height:auto;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 46% 47%);
+           transform-origin: right;
+           transform: scale(1);
         }
     }
 }

@@ -102,8 +102,10 @@
         }
 
         @include u.breakpoint(x-large) {
-            max-width: 100em;
-            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap:1em;
+            max-width: 73.75em;
         }
     }
 
@@ -126,13 +128,9 @@
         }
 
         @include u.breakpoint(x-large) {
-            flex-direction: row;
-            width:35em;
-            align-items: center;
-            gap:2em;
-            height:15em;
-            max-width: 100%;
+           height:35em;
         }
+
     }
 
     &__food-img{
@@ -147,9 +145,7 @@
         }
 
         @include u.breakpoint(x-large) {
-            height:10em;
-            max-width:10em;
-            border-radius: 10px;
+            border-radius: 5px;
         }
     }
 

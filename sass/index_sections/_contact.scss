@@ -49,6 +49,10 @@
             width:60%;
             max-width: 25em;
         }
+
+        @include u.breakpoint(x-large) {
+            max-width: 20em;
+        }
         
         &::before{
             z-index: 1;

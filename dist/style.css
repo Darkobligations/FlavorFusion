@@ -126,6 +126,8 @@ body {
     background-color: white;
     padding: 0.6em 2em;
     justify-content: center;
+    position: fixed;
+    z-index: 100;
   }
 }
 
@@ -478,8 +480,9 @@ body {
 }
 @media (min-width: 64em) {
   #landing-section::after {
-    clip-path: none;
-    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 46% 47%);
+    transform-origin: right;
+    transform: scale(1);
   }
 }
 
@@ -705,7 +708,6 @@ body {
   height: 100%;
   display: block;
   margin-top: 4em;
-  z-index: -1;
   position: relative;
 }
 @media (min-width: 30em) {
@@ -744,6 +746,7 @@ body {
   width: 100%;
   height: 100%;
   max-width: 35em;
+  z-index: -10;
   background-image: url("/image/Utility/background-text.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -952,7 +955,10 @@ body {
 }
 @media (min-width: 64em) {
   .menu__food-wrapper {
-    max-width: 100em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    max-width: 73.75em;
   }
 }
 .menu__food-card {
@@ -977,12 +983,7 @@ body {
 }
 @media (min-width: 64em) {
   .menu__food-card {
-    flex-direction: row;
-    width: 35em;
-    align-items: center;
-    gap: 2em;
-    height: 15em;
-    max-width: 100%;
+    height: 35em;
   }
 }
 .menu__food-img {
@@ -998,9 +999,7 @@ body {
 }
 @media (min-width: 64em) {
   .menu__food-img {
-    height: 10em;
-    max-width: 10em;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 }
 .menu__food-row-wrapper {
@@ -1139,6 +1138,11 @@ body {
   .contact__img {
     width: 60%;
     max-width: 25em;
+  }
+}
+@media (min-width: 64em) {
+  .contact__img {
+    max-width: 20em;
   }
 }
 .contact__img::before {
