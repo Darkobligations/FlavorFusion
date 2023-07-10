@@ -126,8 +126,6 @@ body {
     background-color: white;
     padding: 0.6em 2em;
     justify-content: center;
-    position: fixed;
-    z-index: 100;
   }
 }
 
