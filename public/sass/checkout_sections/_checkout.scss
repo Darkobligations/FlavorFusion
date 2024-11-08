@@ -1,0 +1,121 @@
+@use '../globals' as u;
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-padding);
+}
+
+.checkout-container::after{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48em;
+    z-index: -1;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 62%);
+    clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 62%);
+    background-color: var(--secondaryBG-color);
+    content: "";
+
+
+    @include u.breakpoint(large) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 46% 47%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 46% 47%);
+        transform-origin: right;
+        transform: scale(1);
+    }
+ 
+}
+
+.checkout-container h1 {
+    font-size: var(--header-size);
+    margin-bottom: 1em;
+}
+
+.checkout-container .navigation__order-item-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: rgb(149 157 165 / .2) 0 8px 24px;
+    padding:clamp(1em, .1vw, 2em);
+}
+
+.navigation__order-item-container .navigation__order-item {
+    width: auto;
+}
+
+
+#checkout-form {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    border: 0px solid #ddd;
+    width:100%;
+    padding:var(--section-padding);
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            background-color: #fff;
+            transition: border-color 0.1s ease;
+
+            &:focus {
+                border-color: var(--util-color);
+                outline: none;
+            }
+        }
+    }
+
+    .order-summary {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f1f1f1;
+        border: 1px solid #e1e1e1;
+        border-radius: 4px;
+
+        h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .total {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+    }
+
+    .checkout-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+        color: black;
+        background-color: var(--util-color);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #7171f3;
+            color:white;
+        }
+    }
+}
