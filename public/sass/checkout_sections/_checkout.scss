@@ -41,6 +41,7 @@
     border-radius: 8px;
     box-shadow: rgb(149 157 165 / .2) 0 8px 24px;
     padding:clamp(1em, .1vw, 2em);
+    max-width: 50rem;
 }
 
 .navigation__order-item-container .navigation__order-item {
@@ -118,4 +119,15 @@
             color:white;
         }
     }
+}
+
+#order-items{
+    display: flex;
+    flex-direction: column;
+    gap:.5em;
+}
+.order-item{
+    display: flex;
+    gap:1em;
+    align-items: stretch;
 }

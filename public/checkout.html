@@ -65,7 +65,7 @@
                     <li><a class = "navigation__links" aria-label = "Go to contact us" href = "mailto:someone@thissite.com">Contact</a></li>
                 </ul>
             </nav>
-            <div class = "navigation__order-wrapper">
+            <div class = "navigation__order-wrapper" aria-hidden = 'false'>
                 <div class = "navigation__order">
                     <div class = "navigation__order-flexRow">
                         <span class = "order-heading">Your Order</span>
@@ -113,7 +113,7 @@
     <div class="checkout-container">
         <h1>Checkout</h1>
         
-        <div id = "test" class = "navigation__order-item-container">
+        <div class = "navigation__order-item-container">
             <div class = "navigation__order-item">
                 <img class = "navigation__order-image" src = "image/menuImages/Rocket Burger.jpg" width = 50 height = 50 decoding="async" aria-hidden="true">
                 <div class = "navigation__order-flex-col-right">
@@ -145,19 +145,13 @@
                     <!-- Order items will be displayed here -->
                 </div>
                 <div class="total">
-                    <strong>Total: <span class = "price">0.00</span></strong>
+                    <strong>Total: <span id = "order-total" class = "price">0.00</span></strong>
                 </div>
             </div>
 
             <button type="submit" class="checkout-button">Place Order</button>
         </form>
     </div>
-
-    <script src="checkout.js"></script>
-    <script>
-        // Initialize checkout handler
-        // const checkout = new CheckoutHandler(cart);
-    </script>
 
      <!------------------------------------------------>
      <!---              FOOTER SECTION              --->
@@ -187,5 +181,12 @@
             </div>
         </footer>
     </section>
+</main>
+
+<script src="checkout.js"></script>
+<script>
+    // Initialize checkout handler
+    const checkout = new CheckoutHandler(JSON.parse(localStorage.getItem("CART")) || []);
+</script>
 </body>
 </html>

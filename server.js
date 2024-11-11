@@ -37,17 +37,6 @@ db.serialize(() => {
         total_amount DECIMAL(10,2) NOT NULL,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     )`);
-
-    // Order items table
-    db.run(`CREATE TABLE IF NOT EXISTS order_items (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        order_id INTEGER,
-        product_id INTEGER,
-        quantity INTEGER,
-        price DECIMAL(10,2),
-        FOREIGN KEY(order_id) REFERENCES orders(id),
-        FOREIGN KEY(product_id) REFERENCES products(id)
-    )`);
 });
 
 // API Endpoints
@@ -64,7 +53,7 @@ app.get('/api/products', (req, res) => {
 
 // Create new order
 app.post('/api/orders', (req, res) => {
-    const { customerName, email, address, totalAmount, items } = req.body;
+    const { customerName, email, address, totalAmount } = req.body;
     
     db.run(`INSERT INTO orders (customer_name, email, address, total_amount) 
             VALUES (?, ?, ?, ?)`,
@@ -76,17 +65,7 @@ app.post('/api/orders', (req, res) => {
             }
             
             const orderId = this.lastID;
-            
-            // Insert order items
-            const stmt = db.prepare(`INSERT INTO order_items 
-                (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)`);
-                
-            items.forEach(item => {
-                stmt.run([orderId, item.productId, item.quantity, item.price]);
-            });
-            
-            stmt.finalize();
-            
+
             res.json({
                 message: "Order created successfully",
                 orderId: orderId

@@ -30,7 +30,7 @@ class CheckoutHandler {
                     <span class="item-price">$${item.price.toFixed(2)}</span>
                 </div>
                 <div class="item-quantity">
-                    <span>Qty: ${item.numberOfUnits}</span>
+                    <span class = "order-capacity">Qty: ${item.numberOfUnits}</span>
                 </div>
             `;
             orderItemsContainer.appendChild(itemElement);

@@ -193,18 +193,21 @@ const cartItem = document.querySelectorAll('.navigation__order-item-container');
 const subtotal = document.querySelectorAll('.price');
 const cart_total_items = document.querySelector('.cart_Capacity');
 
-const checkCartItem = document.querySelector('#test');
 const checkout_btn = document.querySelector('#checkout_btn');
 const warning = document.querySelector('.popup-warning');
 
 // Event listener for the checkout button
-checkout_btn.addEventListener('click', () => {
-    if (checkCartItem.innerHTML.trim() === '') {
-        warning.style.display = 'flex';
-    } else {
-        window.location.href = 'checkout.html';
-    }
-});
+
+checkout_btn.addEventListener('click', () =>{
+    cartItem.forEach((item) =>{
+        if(item.innerHTML == ''){
+            warning.style.display = 'flex';
+        }
+        else{
+            window.location.href = 'checkout.html';
+        }
+    })
+})
 
 
 window.addEventListener('DOMContentLoaded', function(){

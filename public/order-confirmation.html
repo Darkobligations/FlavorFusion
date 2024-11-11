@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!--Do Not Duplicate Link-->
+
+ <link rel = "canonical" href = "">
+ <meta name = "description" content = "Flavor Fusion is your gateway to an exceptional culinary journey, offering a wide range of delectable dishes delivered right to your doorstep. With a dedication to quality and flavor, we carefully craft each meal to deliver an unforgettable dining experience.">
+ <meta name="keywords" content="" />
+
+ <!--Social Media Display-->
+
+ <meta property="og:title" content="Flavor Fusion | Hamburgers, Cheeseburgers, Smoothies, Milkshakes, and More." />
+ <meta property="og:type" content="website"/>
+ <meta property="og:url" content="" />
+ <meta property="og:image" content="" />
+ <meta property="og:image:secure_url" content="" />
+ <meta property = "og:description" content = "Flavor Fusion is your gateway to an exceptional culinary journey, offering a wide range of delectable dishes delivered right to your doorstep. With a dedication to quality and flavor, we carefully craft each meal to deliver an unforgettable dining experience.">
+ 
+ <!--Favicons-->
+
+
+ <meta name="theme-color" content="#ffffff" />
+
+ <!--Preload-->
+ 
+ <link rel="preload" as="font" type="font/woff2" href="" crossorigin />
+ <link rel="preload" as="font" type="font/woff2" href="" crossorigin />
+ 
+ <link rel = "stylesheet" href = "dist/style.css">
+ <script src="script.js" defer></script>
+ 
+ <title>Flavor Fusion | Hamburgers, Cheeseburgers, Smoothies, Milkshakes, and More.</title>
+    
+</head>
+<body>
+    
+    <!------------------------------------------------>
+    <!----                 TOPPER                 ---->
+    <!------------------------------------------------>
+    
+    <div class = "banner">
+        <div class = "banner__image-wrapper" decoding = 'async' aria-hidden = "true"></div>
+        <span class = "banner__text">We offer takeaway and delivery services for your convenience.<a class = "banner__order" href = "menu.html" aria-label = "Click here to order now."> Order Now!</a></span>
+    </div>
+
+    <!------------------------------------------------>
+    <!----               NAVIGATION               ---->
+    <!------------------------------------------------>
+
+    <header id = "navigation-bar" class = "Navigation-bar">
+        <div class = "navigation">
+            <!--LOGO-->
+            <a class = "navigation__logo" aria-label="Go back to home page" href = "/"><img width = "50" aria-hidden = "true" decoding = "async" height = "50" alt = "logo" src = "image/logo.png"></a>
+            <nav class = "navigation__wrapper">
+                <!--NAVIGATION LIST-->
+                <ul class = "navigation__ul">
+                    <li><a class = "navigation__links" aria-label = "Go to home page" href = "/">Home</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to about section" href = "menu.html">Order</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to projects section" href = "about.html">About</a></li>
+                    <li><a class = "navigation__links" aria-label = "Go to contact us" href = "mailto:someone@thissite.com">Contact</a></li>
+                </ul>
+            </nav>
+            <!--ORDER MENU-->
+            <div class = "navigation__order-wrapper" aria-hidden="true">
+                <div class = "navigation__order">
+                    <div class = "navigation__order-flexRow">
+                        <span class = "order-heading">Your Order</span>
+                        <button aria-label = "close the order menu" id = "closeToggle" class = "closeToggle"><span class = "close-span" aria-hidden = "true"></span></button>
+                    </div>
+                    <div class = "navigation__order-item-container">
+                        <div class = "navigation__order-item">
+                            <img class = "navigation__order-image" src = "image/menuImages/Rocket Burger.jpg" width = 50 height = 50 decoding="async" aria-hidden="true">
+                            <div class = "navigation__order-flex-col-right">
+                                <span class = "navigation__order-item-heading">Rocket Burger</span>
+                                <span class = "navigation__order-item-price">$7.20 USD</span>
+                                <button class = "btn-danger navigation__order-item-remove">Remove</button>
+                            </div>
+                            <div class = "navigation__order-quantity">
+                                <img src = "image/icons/plus.svg" alt = "increase the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                                <span class = "order-capacity">0</span>
+                                <img src = "image/icons/minus.svg" alt = "Decrease the amount" width = 20 height = 20 decoding="async" loading="lazy">
+                            </div>
+                        </div>  
+                    </div>
+                    <div class = "checkout">
+                        <div class = "subtotal">
+                            <span> Subtotal</span>
+                            <span class = "price">$0.00</span>
+                        </div>
+                        <button id = "checkout_btn">Continue to Checkout</button>
+                        <div class = "popup-warning">
+                            <span>Add Items To The Cart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Shopping CART TOGGLE-->
+            <button class = "navigation__order-toggle" aria-label = "order cart toggle" id = "shoppingToggle">
+                <img src = "image/icons/cart.svg" aria-hidden = "true" alt = "shopping cart" width = "20" height = "20" decoding = "async">
+                <span aria-label = "Total amount of items in the cart" class = "navigation__order-capacity cart_Capacity">
+                    0
+                </span>
+            </button>
+                
+            <!--MOBILE MENU TOGGLE-->
+            <button class = "navigation__toggle" aria-label = "mobile menu toggle" id = "menuToggle"><span class = "navigation__toggle-span" aria-hidden = "true"></span></button>
+            
+        </div>
+    </header>
+ <main>
+
+    <!------------------------------------------------>
+    <!---               LANDING PAGE               --->
+    <!------------------------------------------------>
+
+    <section id = "landing-section"> 
+        <div class = "landing-container">
+            <h1>Thank You For Your Order!</h1>
+        </div>
+    </section>
+     
+ </main>
+</body>
+</html>
