@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 
-const dbPath = process.env.DATABASE_PATH || path.join(__dirname, 'shop.db');t
+const dbPath = process.env.DATABASE_PATH || path.join(__dirname, 'shop.db');
 console.log('Database path:', dbPath);
 
 
