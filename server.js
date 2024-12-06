@@ -6,7 +6,9 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 
-const dbPath = process.env.DATABASE_PATH || path.join(__dirname, 'shop.db');
+const dbPath = process.env.DATABASE_PATH || path.join(__dirname, 'shop.db');t
+console.log('Database path:', dbPath);
+
 
 const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
