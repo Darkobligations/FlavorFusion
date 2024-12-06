@@ -1,77 +1,115 @@
-// server.js
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
-const path = require('path');
 const app = express();
 
-// Middleware to parse JSON bodies
 app.use(express.json());
-// Serve static files from 'public' directory
 app.use(express.static('public'));
 
-// Create database connection
 const db = new sqlite3.Database('shop.db', (err) => {
     if (err) {
-        console.error(err.message);
+        console.error("Error connecting to the shop database:", err.message);
+    } else {
+        console.log('Connected to the shop database.');
     }
-    console.log('Connected to the shop database.');
 });
 
 // Initialize database tables
 db.serialize(() => {
-    // Products table
-    db.run(`CREATE TABLE IF NOT EXISTS products (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        price DECIMAL(10,2) NOT NULL,
-        description TEXT,
-        image_url TEXT
-    )`);
-
     // Orders table
     db.run(`CREATE TABLE IF NOT EXISTS orders (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         customer_name TEXT NOT NULL,
         email TEXT NOT NULL,
         address TEXT NOT NULL,
-        total_amount DECIMAL(10,2) NOT NULL,
+        total_amount REAL NOT NULL,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )`);
+
+    // Order Items table
+    db.run(`CREATE TABLE IF NOT EXISTS order_items (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        order_id INTEGER NOT NULL,
+        item_name TEXT NOT NULL,
+        quantity INTEGER NOT NULL,
+        price REAL NOT NULL,
+        FOREIGN KEY (order_id) REFERENCES orders(id)
     )`);
 });
 
-// API Endpoints
-// Get all products
-app.get('/api/products', (req, res) => {
-    db.all('SELECT * FROM products', [], (err, rows) => {
-        if (err) {
-            res.status(500).json({ error: err.message });
-            return;
-        }
-        res.json(rows);
+// Create new order with items
+app.post('/api/orders', async (req, res) => {
+    const { customerName, email, address, totalAmount, items } = req.body;
+
+    // Input validation
+    if (!customerName || !email || !address || isNaN(totalAmount) || !Array.isArray(items)) {
+        return res.status(400).json({ 
+            error: "Invalid input data",
+            details: "All fields are required and items must be an array"
+        });
+    }
+
+    // Validate items
+    if (!items.every(item => item.name && item.quantity && item.price)) {
+        return res.status(400).json({
+            error: "Invalid items data",
+            details: "Each item must have a name, quantity, and price"
+        });
+    }
+
+    // Start a database transaction
+    db.serialize(() => {
+        db.run('BEGIN TRANSACTION');
+
+        db.run(
+            `INSERT INTO orders (customer_name, email, address, total_amount) 
+             VALUES (?, ?, ?, ?)`,
+            [customerName, email, address, parseFloat(totalAmount).toFixed(2)],
+            function(err) {
+                if (err) {
+                    console.error('Error creating order:', err);
+                    db.run('ROLLBACK');
+                    return res.status(500).json({ error: "Failed to create order" });
+                }
+
+                const orderId = this.lastID;
+                let itemsProcessed = 0;
+
+                // Insert each item
+                items.forEach((item) => {
+                    db.run(
+                        `INSERT INTO order_items (order_id, item_name, quantity, price) 
+                         VALUES (?, ?, ?, ?)`,
+                        [orderId, item.name, item.quantity, parseFloat(item.price).toFixed(2)],
+                        (err) => {
+                            if (err) {
+                                console.error('Error inserting order item:', err);
+                                db.run('ROLLBACK');
+                                return res.status(500).json({ error: "Failed to create order items" });
+                            }
+
+                            itemsProcessed++;
+                            if (itemsProcessed === items.length) {
+                                db.run('COMMIT', (err) => {
+                                    if (err) {
+                                        console.error('Error committing transaction:', err);
+                                        db.run('ROLLBACK');
+                                        return res.status(500).json({ error: "Failed to complete order" });
+                                    }
+                                    res.json({
+                                        message: "Order created successfully",
+                                        orderId: orderId
+                                    });
+                                });
+                            }
+                        }
+                    );
+                });
+            }
+        );
     });
 });
 
-// Create new order
-app.post('/api/orders', (req, res) => {
-    const { customerName, email, address, totalAmount } = req.body;
-    
-    db.run(`INSERT INTO orders (customer_name, email, address, total_amount) 
-            VALUES (?, ?, ?, ?)`,
-        [customerName, email, address, totalAmount],
-        function(err) {
-            if (err) {
-                res.status(500).json({ error: err.message });
-                return;
-            }
-            
-            const orderId = this.lastID;
 
-            res.json({
-                message: "Order created successfully",
-                orderId: orderId
-            });
-        });
-});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

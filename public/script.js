@@ -302,7 +302,7 @@ function changeNumberOfUnits(action, id){
             if(action === "minus" && numberOfUnits > 1){
                 numberOfUnits--;
             }else if (action === "plus") {
-                maxUnits = 20;
+                maxUnits = 100;
                 if(numberOfUnits < maxUnits){
                     numberOfUnits++;
                 }

@@ -20,6 +20,9 @@ class CheckoutHandler {
     populateOrderSummary() {
         const orderItemsContainer = document.getElementById('order-items');
         const orderTotalElement = document.getElementById('order-total');
+        
+        // Clear existing items
+        orderItemsContainer.innerHTML = '';
 
         this.cart.forEach(item => {
             const itemElement = document.createElement('div');
@@ -30,7 +33,7 @@ class CheckoutHandler {
                     <span class="item-price">$${item.price.toFixed(2)}</span>
                 </div>
                 <div class="item-quantity">
-                    <span class = "order-capacity">Qty: ${item.numberOfUnits}</span>
+                    <span class="order-capacity">Qty: ${item.numberOfUnits}</span>
                 </div>
             `;
             orderItemsContainer.appendChild(itemElement);
@@ -49,7 +52,7 @@ class CheckoutHandler {
             address: formData.get('address'),
             totalAmount: this.calculateTotal(),
             items: this.cart.map(item => ({
-                productId: item.id,
+                name: item.heading,         // Changed from productId to match server expectations
                 quantity: item.numberOfUnits,
                 price: item.price
             }))
@@ -64,18 +67,23 @@ class CheckoutHandler {
                 body: JSON.stringify(orderData)
             });
 
-            const result = await response.json();
-
-            if (response.ok) {
-                // Clear cart
-                localStorage.removeItem('CART');
-                // Show success message
-                alert('Order placed successfully!');
-                window.location.href = '/order-confirmation.html';
-            } else {
-                throw new Error(result.error);
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Error processing order');
             }
+
+            const result = await response.json();
+            
+            // Clear cart
+            localStorage.removeItem('CART');
+            
+            // Store order ID in localStorage for order confirmation page
+            localStorage.setItem('lastOrderId', result.orderId);
+            
+            // Redirect to order confirmation
+            window.location.href = '/order-confirmation.html';
         } catch (error) {
+            console.error('Checkout error:', error);
             alert('Error processing order: ' + error.message);
         }
     }
