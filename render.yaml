@@ -2,6 +2,16 @@ services:
   - type: web
     name: food-ecommerce-app
     runtime: node
-    buildCommand: npm install && npm rebuild sqlite3 --build-from-source
+    buildCommand: npm install && npm rebuild sqlite3
     startCommand: node server.js
     branch: main
+    envVars:
+      - key: NODE_VERSION
+        value: 18.x
+      - key: DATABASE_PATH
+        value: /opt/render/project/database/shop.db
+
+disk:
+  - name: sqlite-data
+    mountPath: /opt/render/project/database
+    sizeGB: 1

@@ -1,11 +1,14 @@
 const express = require('express');
+const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
 const app = express();
 
 app.use(express.json());
 app.use(express.static('public'));
 
-const db = new sqlite3.Database('shop.db', (err) => {
+const dbPath = process.env.DATABASE_PATH || path.join(__dirname, 'shop.db');
+
+const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error("Error connecting to the shop database:", err.message);
     } else {
