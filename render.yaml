@@ -3,5 +3,5 @@ services:
     name: food-ecommerce-app
     runtime: node
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node server.js
     branch: main
