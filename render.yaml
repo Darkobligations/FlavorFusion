@@ -2,6 +2,6 @@ services:
   - type: web
     name: food-ecommerce-app
     runtime: node
-    buildCommand: npm install
+    buildCommand: npm install && npm rebuild sqlite3 --build-from-source
     startCommand: node server.js
     branch: main
